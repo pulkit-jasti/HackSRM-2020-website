@@ -22,6 +22,7 @@ $silver: #f8f8f8;
 }
 
 .row {
+	//disable this on mobile devices
 	margin: auto !important;
 	//https://stackoverflow.com/questions/47559916/bootstrap-4-row-extends-outside-of-container/52121389
 }
@@ -45,110 +46,125 @@ main {
 	//height: 100vh;
 	width: 100%;
 	background-color: lightcoral;
+}
 
-	.hero {
-		height: 100vh;
-		width: 100%;
+.hero {
+	height: 100vh;
+	width: 100%;
+	background-color: blue;
 
-		.container-fluid {
+	.container-fluid {
+		height: 100%;
+		//background-color: lightskyblue;
+
+		.row {
 			height: 100%;
-			//background-color: lightskyblue;
+			//background-color: lightsalmon;
 
-			.row {
+			.left {
 				height: 100%;
-				background-color: lightsalmon;
+				//background-color: lightgreen;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
 
-				.left {
-					height: 100%;
-					background-color: lightgreen;
+				.location-date-wrapper {
 					display: flex;
-					flex-direction: column;
+					justify-content: space-between;
+
+					color: #fff;
+					font-size: 1.3rem;
+				}
+
+				.starts-in {
+					//background-color: lightblue;
+
+					span {
+						color: #fff;
+						font-size: 1.5rem;
+					}
+
+					.main {
+						margin-top: 20px;
+						display: flex;
+						gap: 30px;
+
+						.time-wrapper {
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							gap: 15px;
+
+							.time {
+								display: flex;
+								gap: 20px;
+
+								.box {
+									height: 45px;
+									width: 45px;
+
+									line-height: 45px;
+									text-align: center;
+									font-size: 1.5rem;
+									color: #fff;
+
+									border: 1px solid #fff;
+									border-radius: 7px;
+								}
+							}
+
+							span {
+								color: #fff;
+								font-size: 1.1rem;
+							}
+						}
+					}
+				}
+
+				.btn-wrapper {
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 20px;
 					justify-content: space-evenly;
 
-					.starts-in {
-						//background-color: lightblue;
+					button {
+						height: 55px;
+						min-width: 225px;
+						padding: 0 30px;
+						background-color: #467afd;
 
-						span {
-							color: #fff;
-							font-size: 1.5rem;
-						}
+						color: #fff;
+						font-size: 1.2rem;
+						font-weight: 400;
 
-						.main {
-							margin-top: 20px;
-							display: flex;
-							gap: 30px;
+						outline: none;
+						border: none;
+						border-radius: 7px;
 
-							.time-wrapper {
-								display: flex;
-								flex-direction: column;
-								align-items: center;
-								gap: 15px;
-
-								.time {
-									display: flex;
-									gap: 20px;
-
-									.box {
-										height: 45px;
-										width: 45px;
-
-										line-height: 45px;
-										text-align: center;
-										font-size: 1.5rem;
-										color: #fff;
-
-										border: 1px solid #fff;
-										border-radius: 7px;
-									}
-								}
-								span {
-									color: #fff;
-									font-size: 1.1rem;
-								}
-							}
-						}
-					}
-
-					.btn-wrapper {
-						width: 100%;
 						display: flex;
-						gap: 20px;
-						justify-content: space-evenly;
+						gap: 15px;
+						align-items: center;
 
-						button {
-							height: 55px;
-							padding: 0 30px;
-							background-color: #467afd;
+						&:hover {
+							cursor: pointer;
+							background-color: #2f60df;
+						}
 
-							color: #fff;
-							font-size: 1.2rem;
-							font-weight: 400;
-
-							outline: none;
-							border: none;
-							border-radius: 7px;
-
-							display: flex;
-							flex-wrap: wrap;
-							gap: 15px;
-							align-items: center;
-
-							&:hover {
-								cursor: pointer;
-								background-color: #2f60df;
-							}
-
-							img {
-								height: 25px;
-							}
+						img {
+							height: 25px;
 						}
 					}
-				}
 
-				.right {
-					height: 100%;
-					background-color: lightpink;
+					.devfolio {
+						min-width: 265px;
+					}
 				}
+			}
+
+			.right {
+				height: 100%;
+				background-color: lightpink;
 			}
 		}
 	}
