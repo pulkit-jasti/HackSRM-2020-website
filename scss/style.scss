@@ -17,6 +17,15 @@ $silver: #f8f8f8;
 	background-repeat: no-repeat;
 }
 
+.container-fluid {
+	padding: 0;
+}
+
+.row {
+	margin: auto !important;
+	//https://stackoverflow.com/questions/47559916/bootstrap-4-row-extends-outside-of-container/52121389
+}
+
 //MIXIN
 @mixin flexcenter {
 	display: flex;
@@ -33,9 +42,63 @@ $silver: #f8f8f8;
 //MAIN CSS
 main {
 	//overflow-x: hidden;
-	height: 100vh;
+	//height: 100vh;
 	width: 100%;
 	background-color: lightcoral;
+
+	.hero {
+		height: 100vh;
+		width: 100%;
+
+		.container-fluid {
+			height: 100%;
+			//background-color: lightskyblue;
+
+			.row {
+				height: 100%;
+				background-color: lightsalmon;
+
+				.left {
+					height: 100%;
+					background-color: lightgreen;
+
+					.starts-in {
+						background-color: lightblue;
+
+						div {
+							width: 300px;
+							background-color: lightcoral;
+							display: flex;
+							justify-content: space-between;
+						}
+
+						.days {
+							width: 60px;
+							display: flex;
+							justify-content: space-between;
+							.box {
+								height: 25px;
+								width: 25px;
+								background-color: lightseagreen;
+							}
+						}
+					}
+
+					.btn-wrapper {
+						width: 100%;
+						background-color: lightpink;
+						display: flex;
+						justify-content: space-evenly;
+					}
+				}
+
+				.right {
+					height: 100%;
+					background-color: lightpink;
+				}
+			}
+		}
+	}
 }
 
 .sample-page {
