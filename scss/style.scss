@@ -111,9 +111,37 @@ main {
 
 					.btn-wrapper {
 						width: 100%;
-						background-color: lightpink;
 						display: flex;
+						gap: 20px;
 						justify-content: space-evenly;
+
+						button {
+							height: 55px;
+							padding: 0 30px;
+							background-color: #467afd;
+
+							color: #fff;
+							font-size: 1.2rem;
+							font-weight: 400;
+
+							outline: none;
+							border: none;
+							border-radius: 7px;
+
+							display: flex;
+							flex-wrap: wrap;
+							gap: 15px;
+							align-items: center;
+
+							&:hover {
+								cursor: pointer;
+								background-color: #2f60df;
+							}
+
+							img {
+								height: 25px;
+							}
+						}
 					}
 				}
 
