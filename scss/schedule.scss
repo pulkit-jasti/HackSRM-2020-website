@@ -1,14 +1,15 @@
-* {
-	box-sizing: border-box;
-}
-
-:root {
-	--line-color: #343436;
-	--secondary-color: #ffc451;
-}
-
 $left: 10%;
 $timeline-color: #343436;
+
+.schedule {
+	.section-title {
+		margin-bottom: 100px;
+
+		font-size: 8rem;
+		text-align: center;
+		font-weight: 700;
+	}
+}
 
 /* The actual timeline (the vertical ruler) */
 .schedule .timeline {
@@ -32,9 +33,12 @@ $timeline-color: #343436;
 /* Container around content */
 .schedule .timeline .container- {
 	padding: 10px 20px;
+	margin: 30px 0;
 	position: relative;
 	background-color: inherit;
-	width: 50%;
+	width: 70%;
+
+	//background-color: lightblue;
 }
 
 /* The circles on the timeline */
@@ -76,7 +80,7 @@ $timeline-color: #343436;
 }
 
 .schedule .container- .text-wrapper p {
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	line-height: 1.7rem;
 }
 
@@ -87,8 +91,8 @@ $timeline-color: #343436;
 .schedule .container- .text-wrapper h2 {
 	//margin-top: 50px;
 	margin-bottom: 20px;
-	font-size: 2.4rem;
-	font-weight: 500;
+	font-size: 1.7rem;
+	font-weight: 700;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
