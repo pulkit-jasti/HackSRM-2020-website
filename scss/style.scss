@@ -44,8 +44,9 @@ $silver: #f8f8f8;
 main {
 	//overflow-x: hidden;
 	//height: 100vh;
+	overflow-x: hidden;
 	width: 100%;
-	background-color: lightcoral;
+	//background-color: lightcoral;
 }
 
 .hero {
@@ -92,7 +93,9 @@ main {
 				.location-date-wrapper {
 					margin-top: 20px;
 					display: flex;
-					justify-content: space-between;
+					flex-direction: column;
+					gap: 15px;
+					//justify-content: space-between;
 
 					color: #fff;
 					font-size: 1.3rem;
@@ -117,6 +120,7 @@ main {
 					.main {
 						margin-top: 20px;
 						display: flex;
+						//flex-wrap: wrap;
 						gap: 30px;
 
 						.time-wrapper {
@@ -155,7 +159,6 @@ main {
 					width: 100%;
 					display: flex;
 					flex-wrap: wrap;
-					gap: 20px;
 					justify-content: space-evenly;
 
 					button {
@@ -194,7 +197,12 @@ main {
 
 			.right {
 				height: 100%;
-				background-color: lightpink;
+				//background-color: lightpink;
+				@include flexcenter();
+
+				img {
+					width: 80%;
+				}
 			}
 		}
 	}

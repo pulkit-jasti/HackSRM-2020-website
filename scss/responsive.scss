@@ -1,5 +1,61 @@
 @media screen and (max-width: 900px) {
+	.row {
+		margin: -15px;
+	}
+
 	.hero {
-		background-color: red;
+		height: unset;
+		.container-fluid {
+			.row {
+				flex-wrap: wrap-reverse;
+				.left {
+					margin: 70px 0;
+					height: unset;
+					padding: 0 30px;
+					gap: 80px;
+					justify-content: unset;
+					//background-color: lightblue;
+
+					.typewriter-wrapper {
+						.title {
+							font-size: 4rem;
+						}
+
+						.typed-cursor {
+							font-size: 4rem;
+						}
+					}
+
+					.starts-in {
+						.main {
+							justify-content: center;
+							gap: 20px;
+
+							.time-wrapper {
+								gap: 5px;
+
+								.time {
+									gap: 10px;
+
+									.box {
+										height: 40px;
+										width: 40px;
+										line-height: 40px;
+									}
+								}
+							}
+						}
+					}
+
+					.btn-wrapper {
+						gap: 30px;
+					}
+				}
+
+				.right {
+					margin-top: 50px;
+				}
+			}
+		}
 	}
 }
