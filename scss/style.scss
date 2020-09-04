@@ -253,10 +253,12 @@ main {
 }
 
 .schedule {
-	.section-title {
-		margin-bottom: 100px;
+	padding: 50px 0;
 
-		font-size: 8rem;
+	.section-title {
+		margin-bottom: 50px;
+
+		font-size: 7rem;
 		text-align: center;
 		font-weight: 700;
 	}
@@ -273,9 +275,9 @@ main {
 				}
 
 				h2 {
-					span {
+					p {
 						color: rgba(0, 0, 0, 0.5);
-						font-size: 1.4rem;
+						//font-size: 1.4rem;
 						font-weight: 400;
 					}
 				}
@@ -285,7 +287,7 @@ main {
 
 	.btn-wrapper {
 		width: 100%;
-		//background-color: lightgreen;
+		margin-bottom: 50px;
 
 		display: flex;
 		justify-content: center;
