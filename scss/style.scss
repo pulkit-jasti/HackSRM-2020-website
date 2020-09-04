@@ -51,7 +51,7 @@ main {
 .hero {
 	height: 100vh;
 	width: 100%;
-	background-color: blue;
+	background-color: $not-black-but-dark;
 
 	.container-fluid {
 		height: 100%;
@@ -63,17 +63,46 @@ main {
 
 			.left {
 				height: 100%;
+				padding: 0 50px;
 				//background-color: lightgreen;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-evenly;
 
+				.typewriter-wrapper {
+					//for the cursor to appear in the same line as the typed text
+					display: flex;
+
+					.title {
+						//height: 7rem;
+						padding: 0 !important;
+						color: #fff;
+						font-size: 6rem;
+						font-weight: 700;
+
+						//background-color: lightblue;
+					}
+
+					.typed-cursor {
+						color: white;
+						font-size: 6rem;
+					}
+				}
+
 				.location-date-wrapper {
+					margin-top: 20px;
 					display: flex;
 					justify-content: space-between;
 
 					color: #fff;
 					font-size: 1.3rem;
+
+					//background-color: lightblue;
+
+					i {
+						font-size: 1.5rem;
+						margin-right: 5px;
+					}
 				}
 
 				.starts-in {
@@ -82,6 +111,7 @@ main {
 					span {
 						color: #fff;
 						font-size: 1.5rem;
+						font-weight: 700;
 					}
 
 					.main {
