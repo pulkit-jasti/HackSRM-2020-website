@@ -9,3 +9,13 @@ var options = {
 	backDelay: 2000,
 };
 var typed = new Typed('.typed', options);
+
+document.getElementById('day-1').addEventListener('click', () => {
+	document.getElementById('schedule-D1').style.display = 'unset';
+	document.getElementById('schedule-D2').style.display = 'none';
+});
+
+document.getElementById('day-2').addEventListener('click', () => {
+	document.getElementById('schedule-D1').style.display = 'none';
+	document.getElementById('schedule-D2').style.display = 'unset';
+});
