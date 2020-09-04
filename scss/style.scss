@@ -251,3 +251,70 @@ main {
 		}
 	}
 }
+
+.schedule {
+	.section-title {
+		margin-bottom: 100px;
+
+		font-size: 8rem;
+		text-align: center;
+		font-weight: 700;
+	}
+
+	#schedule-D2 {
+		display: none;
+	}
+
+	.timeline {
+		.container- {
+			.text-wrapper {
+				h2.day-num {
+					font-size: 2.5rem;
+				}
+
+				h2 {
+					span {
+						color: rgba(0, 0, 0, 0.5);
+						font-size: 1.4rem;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+
+	.btn-wrapper {
+		width: 100%;
+		//background-color: lightgreen;
+
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+
+		button {
+			padding: 10px 50px;
+			background-color: #000;
+
+			outline: none;
+			border: none;
+			border-radius: 7px;
+
+			color: #fff;
+			font-size: 1.3rem;
+			font-weight: 400;
+
+			transition-duration: 300ms;
+			box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1);
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&:active {
+				transform: scale(0.9, 0.9);
+				//transform: translateY(5px);
+				box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
+}
