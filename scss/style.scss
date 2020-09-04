@@ -49,6 +49,8 @@ main {
 	//background-color: lightcoral;
 }
 
+/* ---------- HERO SECTION ---------- */
+
 .hero {
 	height: 100vh;
 	width: 100%;
@@ -74,7 +76,7 @@ main {
 					//for the cursor to appear in the same line as the typed text
 					display: flex;
 
-					.title {
+					.typed {
 						//height: 7rem;
 						padding: 0 !important;
 						color: #fff;
@@ -127,11 +129,11 @@ main {
 							display: flex;
 							flex-direction: column;
 							align-items: center;
-							gap: 15px;
+							gap: 10px;
 
 							.time {
 								display: flex;
-								gap: 20px;
+								gap: 15px;
 
 								.box {
 									height: 45px;
@@ -208,8 +210,42 @@ main {
 	}
 }
 
-.sample-page {
-	height: 100vh;
-	width: 100%;
-	background-color: lightblue;
+/* ---------- HERO SECTION END ---------- */
+
+.about {
+	padding: 100px 0px;
+	.container-fluid {
+		.row {
+			justify-content: center;
+
+			div:first-child {
+				//margin-bottom: 70px;
+				//background-color: lightblue;
+			}
+
+			.col-md-8 {
+				//background-color: lightblue;
+
+				.title {
+					//background-color: lightcoral;
+					margin-bottom: 20px;
+
+					text-align: center;
+					font-size: 4rem;
+					font-weight: 700;
+				}
+
+				.content {
+					//background-color: lightgreen;
+					text-align: justify;
+					font-size: 1.5rem;
+
+					div {
+						text-align: center;
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
 }

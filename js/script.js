@@ -8,4 +8,4 @@ var options = {
 	backSpeed: 40,
 	backDelay: 2000,
 };
-var typed = new Typed('.title', options);
+var typed = new Typed('.typed', options);
