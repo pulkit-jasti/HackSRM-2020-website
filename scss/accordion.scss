@@ -2,8 +2,6 @@
 	.container-fluid {
 		display: flex;
 		justify-content: center;
-		background-color: lightblue;
-		padding: 0 !important;
 	}
 
 	ul {
@@ -13,8 +11,6 @@
 	.accordion {
 		width: 70%;
 		padding: 0 15px;
-		background: red;
-		margin: 0 !important;
 	}
 
 	.accordion .link {
@@ -22,8 +18,8 @@
 		cursor: pointer;
 		display: inline-block;
 		padding: 15px;
-		font-size: 14px;
-		font-weight: 700;
+		font-size: 1.2rem;
+		font-weight: 600;
 		position: relative;
 		transition: all 0.4s ease;
 		margin: 10px 0;
@@ -44,10 +40,6 @@
 		}
 	}
 
-	.accordion li {
-		//margin: 20px 0;
-	}
-
 	.accordion li i {
 		position: absolute;
 		top: 16px;
@@ -61,10 +53,6 @@
 		left: auto;
 		font-size: 16px;
 	}
-
-	/*.accordion li.open .link {
-		color: blue;
-	}*/
 
 	.accordion li.open i.fa-chevron-down {
 		transform: rotate(180deg);
