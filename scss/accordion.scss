@@ -16,10 +16,12 @@
 	.accordion .link {
 		width: 100%;
 		cursor: pointer;
-		display: inline-block;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
 		padding: 15px;
-		font-size: 1.2rem;
-		font-weight: 600;
 		position: relative;
 		transition: all 0.4s ease;
 		margin: 10px 0;
@@ -40,10 +42,15 @@
 		}
 	}
 
+	.link {
+		.question {
+			font-size: 1.2rem;
+			font-weight: 500;
+			margin: 0 20px 0 0;
+		}
+	}
+
 	.accordion li i {
-		position: absolute;
-		top: 16px;
-		left: 12px;
 		font-size: 18px;
 		transition: all 0.4s ease;
 	}
@@ -64,14 +71,15 @@
 		font-size: 14px;
 	}
 
-	.submenu li {
-		//display: block;
-		background-color: #000;
-		color: #fff;
-		padding: 20px 40px;
-		font-size: 1.1rem;
-		border-radius: 10px;
+	.submenu {
+		.answer {
+			background-color: #000;
+			color: #fff;
+			padding: 20px 40px;
+			font-size: 1.1rem;
+			border-radius: 10px;
 
-		text-align: justify;
+			text-align: justify;
+		}
 	}
 }

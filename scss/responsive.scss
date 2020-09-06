@@ -87,8 +87,10 @@
 				width: 100%;
 			}
 
-			.submenu li {
-				padding: 20px 25px;
+			.submenu {
+				.answer {
+					padding: 20px 25px;
+				}
 			}
 		}
 	}
