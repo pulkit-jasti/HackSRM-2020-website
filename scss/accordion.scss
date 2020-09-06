@@ -1,26 +1,29 @@
 .faq {
 	.container-fluid {
-		padding: 0 15px !important;
+		display: flex;
+		justify-content: center;
+		background-color: lightblue;
+		padding: 0 !important;
 	}
+
 	ul {
 		list-style-type: none;
 	}
 
 	.accordion {
-		width: 100%;
-		//background: #eee;
-		border-radius: 4px;
-		gap: 50px;
+		width: 70%;
+		padding: 0 15px;
+		background: red;
+		margin: 0 !important;
 	}
 
 	.accordion .link {
 		width: 100%;
 		cursor: pointer;
 		display: inline-block;
-		padding: 15px 15px 15px 15px;
+		padding: 15px;
 		font-size: 14px;
 		font-weight: 700;
-		//border-bottom: 1px solid #ccc;
 		position: relative;
 		transition: all 0.4s ease;
 		margin: 10px 0;
