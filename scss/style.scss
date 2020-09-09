@@ -356,3 +356,46 @@ main {
 		background-color: lightgreen;
 	}
 }
+
+.team {
+	h3.info {
+		text-align: center;
+	}
+
+	.container {
+		//background-color: lightgreen;
+	}
+
+	.card-container {
+		display: flex;
+		gap: 40px;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.team-card {
+			height: 300px;
+			width: 200px;
+			background-color: lightblue;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+
+			.img-wrapper {
+				height: 65%;
+				overflow: hidden;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.name {
+			}
+
+			.social-btn-container {
+			}
+		}
+	}
+}
