@@ -29,6 +29,14 @@ $silver: #f8f8f8;
 	//https://stackoverflow.com/questions/47559916/bootstrap-4-row-extends-outside-of-container/52121389
 }
 
+.section-title {
+	margin: 50px 0;
+
+	font-size: 6rem;
+	text-align: center;
+	font-weight: 700;
+}
+
 //MIXIN
 @mixin flexcenter {
 	display: flex;
@@ -232,6 +240,12 @@ main {
 
 /* ---------- HERO SECTION END ---------- */
 
+//
+
+//
+
+/* ---------- ABOUT SECTION ---------- */
+
 .about {
 	padding: 100px 0px;
 	.container-fluid {
@@ -275,13 +289,13 @@ main {
 	}
 }
 
-.section-title {
-	margin-bottom: 50px;
+/* ---------- ABOUT SECTION END ---------- */
 
-	font-size: 7rem;
-	text-align: center;
-	font-weight: 700;
-}
+//
+
+//
+
+/* ---------- SCHEDULE SECTION ---------- */
 
 .schedule {
 	padding: 50px 0;
@@ -343,12 +357,28 @@ main {
 	}
 }
 
+/* ---------- SCHEDULE SECTION END ---------- */
+
+//
+
+//
+
+/* ---------- FAQs SECTION ---------- */
+
 .faq {
 	.container {
 		@include flexcenter();
 		padding: 0 130px;
 	}
 }
+
+/* ---------- FAQs SECTION END ---------- */
+
+//
+
+//
+
+/* ---------- TEAM SECTION ---------- */
 
 .team {
 	h3.info {
@@ -438,6 +468,14 @@ main {
 	}
 }
 
+/* ---------- TEAM SECTION END ---------- */
+
+//
+
+//
+
+/* ---------- CONTACT SECTION ---------- */
+
 .contact {
 	.container {
 		display: flex;
@@ -466,3 +504,5 @@ main {
 		}
 	}
 }
+
+/* ---------- CONTACT SECTION END ---------- */
