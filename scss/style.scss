@@ -360,6 +360,9 @@ main {
 .team {
 	h3.info {
 		text-align: center;
+		padding: 0 20px;
+
+		font-size: 1.5rem;
 	}
 
 	.container {
@@ -367,10 +370,14 @@ main {
 	}
 
 	.card-container {
+		margin-top: 50px;
+
 		display: flex;
 		gap: 40px;
 		flex-wrap: wrap;
 		justify-content: center;
+
+		//background-color: lightblue;
 
 		.team-card {
 			height: 350px;
