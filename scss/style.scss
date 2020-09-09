@@ -375,7 +375,7 @@ main {
 		.team-card {
 			height: 300px;
 			width: 200px;
-			background-color: lightblue;
+			//background-color: lightblue;
 
 			display: flex;
 			flex-direction: column;
@@ -383,8 +383,9 @@ main {
 			align-items: center;
 
 			.img-wrapper {
-				height: 65%;
+				height: 67%;
 				overflow: hidden;
+				border-radius: 10px;
 
 				img {
 					width: 100%;
@@ -392,9 +393,39 @@ main {
 			}
 
 			.name {
+				padding: 5px 15px;
+				background-color: #000;
+
+				color: #fff;
+				font-weight: 500;
+				letter-spacing: 1px;
+
+				border-radius: 10px;
 			}
 
 			.social-btn-container {
+				color: #fff;
+				display: flex;
+				gap: 10px;
+
+				div {
+					height: 2rem;
+					width: 2rem;
+					border-radius: 100%;
+					@include flexcenter();
+
+					img {
+						width: 60%;
+					}
+				}
+
+				.linkedin {
+					background-color: #0077b5;
+				}
+
+				.github {
+					background-color: #000;
+				}
 			}
 		}
 	}
