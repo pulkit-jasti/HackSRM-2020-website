@@ -373,8 +373,8 @@ main {
 		justify-content: center;
 
 		.team-card {
-			height: 300px;
-			width: 200px;
+			height: 350px;
+			width: 250px;
 			//background-color: lightblue;
 
 			display: flex;
@@ -385,10 +385,17 @@ main {
 			.img-wrapper {
 				height: 67%;
 				overflow: hidden;
-				border-radius: 10px;
+				border-radius: 20px;
+
+				box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1);
+				transition-duration: 400ms;
 
 				img {
 					width: 100%;
+				}
+
+				&:hover {
+					transform: scale(1.1, 1.1);
 				}
 			}
 
@@ -401,6 +408,8 @@ main {
 				letter-spacing: 1px;
 
 				border-radius: 10px;
+
+				box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 			}
 
 			.social-btn-container {
@@ -413,6 +422,8 @@ main {
 					width: 2rem;
 					border-radius: 100%;
 					@include flexcenter();
+
+					box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 
 					img {
 						width: 60%;
