@@ -171,11 +171,10 @@ main {
 						height: 55px;
 						min-width: 225px;
 						padding: 0 30px;
-						background-color: #467afd;
 
 						color: #fff;
 						font-size: 1.2rem;
-						font-weight: 400;
+						font-weight: 500;
 
 						outline: none;
 						border: none;
@@ -187,16 +186,33 @@ main {
 
 						&:hover {
 							cursor: pointer;
-							background-color: #2f60df;
-						}
-
-						img {
-							height: 25px;
 						}
 					}
 
 					.devfolio {
 						min-width: 265px;
+						background-color: #3770ff;
+
+						img {
+							height: 25px;
+						}
+
+						&:hover {
+							background-color: #2f60df;
+						}
+					}
+
+					.discord {
+						color: #7289d9;
+						background-color: #fff;
+
+						img {
+							height: 30px;
+						}
+
+						&:hover {
+							background-color: #ddd;
+						}
 					}
 				}
 			}
