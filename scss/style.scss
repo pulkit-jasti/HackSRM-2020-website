@@ -350,23 +350,12 @@ main {
 	}
 }
 
-.contact {
-	.container {
-		height: 300px;
-		background-color: lightgreen;
-	}
-}
-
 .team {
 	h3.info {
 		text-align: center;
 		padding: 0 20px;
 
 		font-size: 1.5rem;
-	}
-
-	.container {
-		//background-color: lightgreen;
 	}
 
 	.card-container {
@@ -443,6 +432,35 @@ main {
 
 				.github {
 					background-color: #000;
+				}
+			}
+		}
+	}
+}
+
+.contact {
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.info {
+			font-size: 2rem;
+		}
+
+		.email {
+			font-size: 5rem;
+
+			a,
+			a:visited,
+			a:active {
+				text-decoration: none;
+				opacity: 1;
+				color: $not-black-but-dark;
+				font-weight: 600;
+
+				&:hover {
+					border-bottom: 7px solid $not-black-but-dark;
 				}
 			}
 		}
