@@ -100,4 +100,17 @@
 			text-align: justify;
 		}
 	}
+
+	.contact {
+		.container {
+			.info {
+				text-align: center;
+				font-size: 1.3rem;
+			}
+			.email {
+				font-weight: 400;
+				font-size: 2rem;
+			}
+		}
+	}
 }
