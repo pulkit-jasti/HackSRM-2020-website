@@ -547,15 +547,12 @@ main {
 
 		.row {
 			flex-wrap: wrap-reverse;
-			//justify-content: space-between;
-			//background-color: lightpink;
 
 			img {
 				width: 100%;
 			}
 
 			.info {
-				//background-color: lightsalmon;
 				padding: 0 50px;
 				display: flex;
 				flex-direction: column;

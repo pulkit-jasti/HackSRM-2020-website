@@ -13,6 +13,7 @@
 
 	.hero {
 		height: unset;
+
 		.container-fluid {
 			.row {
 				flex-wrap: wrap-reverse;
@@ -71,16 +72,38 @@
 		padding: 30px 10px;
 	}
 
+	.themes {
+		.container {
+			.row {
+				.info {
+					margin-top: 50px;
+					padding: 0 15px;
+					align-items: center;
+
+					.theme-title {
+						margin-bottom: 20px;
+					}
+
+					.theme-info {
+						text-align: justify;
+					}
+				}
+			}
+		}
+	}
+
 	.schedule {
 		.section-title {
 			font-size: 4.5rem;
 		}
+
 		.timeline {
 			.container- {
 				.text-wrapper {
 					h2 {
 						font-size: 1.7rem !important;
 					}
+
 					p {
 						font-size: 1.3rem;
 					}
