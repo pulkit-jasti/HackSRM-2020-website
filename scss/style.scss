@@ -506,3 +506,50 @@ main {
 }
 
 /* ---------- CONTACT SECTION END ---------- */
+
+.themes {
+	.container {
+		//height: 300px;
+		//background-color: lightblue;
+
+		display: flex;
+		flex-direction: column;
+		gap: 130px;
+
+		.row {
+			flex-wrap: wrap-reverse;
+			//background-color: lightpink;
+
+			img {
+				width: 100%;
+			}
+
+			.info {
+				//background-color: lightsalmon;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				.theme-title {
+					//background-color: lightcoral;
+					text-align: center;
+					font-size: 2.5rem;
+					font-weight: 700;
+				}
+
+				.theme-info {
+					//background-color: lightgreen;
+					font-size: 1.2rem;
+					font-weight: 700;
+					color: rgba(0, 0, 0, 0.5);
+					//letter-spacing: 0.5px;
+					word-spacing: 3px;
+				}
+			}
+		}
+
+		.left {
+			flex-direction: row-reverse;
+		} //use the alternate child psuedo class to do this
+	}
+}
