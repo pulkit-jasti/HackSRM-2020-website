@@ -518,6 +518,7 @@ main {
 
 		.row {
 			flex-wrap: wrap-reverse;
+			//justify-content: space-between;
 			//background-color: lightpink;
 
 			img {
@@ -526,6 +527,7 @@ main {
 
 			.info {
 				//background-color: lightsalmon;
+				padding: 0 50px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
