@@ -37,6 +37,15 @@ $silver: #f8f8f8;
 	font-weight: 700;
 }
 
+body {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
 //MIXIN
 @mixin flexcenter {
 	display: flex;
@@ -509,12 +518,11 @@ main {
 
 .themes {
 	.container {
-		//height: 300px;
-		//background-color: lightblue;
+		margin-top: 100px;
 
 		display: flex;
 		flex-direction: column;
-		gap: 130px;
+		gap: 80px;
 
 		.row {
 			flex-wrap: wrap-reverse;
@@ -531,12 +539,18 @@ main {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+				align-items: flex-end;
 
 				.theme-title {
-					//background-color: lightcoral;
+					width: fit-content;
 					text-align: center;
-					font-size: 2.5rem;
+					font-size: 1.5rem;
 					font-weight: 700;
+
+					background-color: $not-black-but-dark;
+					color: #fff;
+					padding: 10px 20px;
+					border-radius: 10px;
 				}
 
 				.theme-info {
@@ -546,12 +560,21 @@ main {
 					color: rgba(0, 0, 0, 0.5);
 					//letter-spacing: 0.5px;
 					word-spacing: 3px;
+					text-align: right;
 				}
 			}
 		}
 
 		.left {
 			flex-direction: row-reverse;
+
+			.info {
+				align-items: flex-start;
+
+				.theme-info {
+					text-align: left;
+				}
+			}
 		} //use the alternate child psuedo class to do this
 	}
 }
