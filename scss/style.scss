@@ -490,13 +490,27 @@ main {
 /* ---------- CONTACT SECTION ---------- */
 
 .contact {
+	padding-bottom: 100px;
+
 	.container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
+		.image-container {
+			margin: 40px 0;
+			max-width: 70%;
+
+			img {
+				width: 100%;
+			}
+		}
+
 		.info {
+			margin-top: 60px;
 			font-size: 2rem;
+			font-weight: 700;
+			color: rgba(0, 0, 0, 0.8);
 			text-align: center;
 		}
 

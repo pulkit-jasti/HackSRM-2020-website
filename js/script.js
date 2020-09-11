@@ -20,6 +20,9 @@ document.getElementById('day-2').addEventListener('click', () => {
 	document.getElementById('schedule-D2').style.display = 'unset';
 });
 
+// Contact section image change on reload
+//document.getElementById('contact-image').innerHTML = `<img src="assets/images/contact/contact-${Math.floor(Math.random() * 8) + 1}.svg" alt="" />`;
+
 //SMOOTH SCROLLING
 $(document).ready(function () {
 	// Add smooth scrolling to all links
