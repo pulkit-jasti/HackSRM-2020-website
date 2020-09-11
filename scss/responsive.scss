@@ -6,7 +6,7 @@
 	.section-title {
 		margin: 50px 0;
 
-		font-size: 4rem;
+		font-size: 3rem !important; //the important tag here exists because the schedule section does not resize. so check that thing and remove the important tag
 		text-align: center;
 		font-weight: 700;
 	}
@@ -111,6 +111,11 @@
 
 	.contact {
 		.container {
+			.image-container {
+				margin: 0;
+				max-width: 950%;
+			}
+
 			.info {
 				text-align: center;
 				font-size: 1.3rem;
