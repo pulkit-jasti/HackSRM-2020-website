@@ -375,6 +375,8 @@ main {
 /* ---------- FAQs SECTION ---------- */
 
 .faq {
+	padding-bottom: 80px;
+
 	.container {
 		@include flexcenter();
 		padding: 0 130px;
@@ -390,9 +392,11 @@ main {
 /* ---------- TEAM SECTION ---------- */
 
 .team {
+	padding-bottom: 90px;
+
 	h3.info {
 		text-align: center;
-		padding: 0 20px;
+		padding: 0 20px 50px 20px;
 
 		font-size: 1.5rem;
 	}
@@ -493,6 +497,7 @@ main {
 
 		.info {
 			font-size: 2rem;
+			text-align: center;
 		}
 
 		.email {
@@ -517,6 +522,8 @@ main {
 /* ---------- CONTACT SECTION END ---------- */
 
 .themes {
+	padding-bottom: 70px;
+
 	.container {
 		margin-top: 100px;
 
