@@ -46,6 +46,10 @@ body {
 	}
 }
 
+main section {
+	padding: 60px 0;
+}
+
 //MIXIN
 @mixin flexcenter {
 	display: flex;
@@ -256,7 +260,6 @@ main {
 /* ---------- ABOUT SECTION ---------- */
 
 .about {
-	padding: 100px 0px;
 	.container-fluid {
 		.row {
 			justify-content: center;
@@ -304,11 +307,127 @@ main {
 
 //
 
+/* ---------- PRIZES SECTION ---------- */
+
+.prizes {
+	.container {
+		.col-md-4 {
+			@include flexcenter();
+		}
+
+		.prize-card {
+			height: 300px;
+			width: 300px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+
+			border-radius: 50px;
+
+			img {
+				transform: scale(0.8);
+			}
+
+			p {
+				text-align: center;
+				color: #fff;
+				font-size: 1.5rem;
+				font-weight: 700;
+			}
+		}
+
+		.first {
+			background-image: linear-gradient(to top, #0093e9 0%, #80d0c7 100%);
+		}
+
+		.second {
+			background-image: linear-gradient(to top, #43e97b 0%, #38f9d7 100%);
+		}
+
+		.third {
+			background-image: linear-gradient(to top, #f5576c 0%, #f093fb 100%);
+		}
+	}
+}
+
+/* ---------- PRIZES SECTION END ---------- */
+
+//
+
+//
+
+/* ---------- THEMES SECTION ---------- */
+
+.themes {
+	.container {
+		margin-top: 100px;
+
+		display: flex;
+		flex-direction: column;
+		gap: 80px;
+
+		.row {
+			flex-wrap: wrap-reverse;
+
+			img {
+				width: 100%;
+			}
+
+			.info {
+				padding: 0 50px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-end;
+
+				.theme-title {
+					width: fit-content;
+					text-align: center;
+					font-size: 1.5rem;
+					font-weight: 700;
+
+					background-color: $not-black-but-dark;
+					color: #fff;
+					padding: 10px 20px;
+					border-radius: 10px;
+				}
+
+				.theme-info {
+					//background-color: lightgreen;
+					font-size: 1.2rem;
+					font-weight: 700;
+					color: rgba(0, 0, 0, 0.5);
+					//letter-spacing: 0.5px;
+					word-spacing: 3px;
+					text-align: right;
+				}
+			}
+		}
+
+		.left {
+			flex-direction: row-reverse;
+
+			.info {
+				align-items: flex-start;
+
+				.theme-info {
+					text-align: left;
+				}
+			}
+		} //use the alternate child psuedo class to do this
+	}
+}
+
+/* ---------- THEMES SECTION END ---------- */
+
+//
+
+//
+
 /* ---------- SCHEDULE SECTION ---------- */
 
 .schedule {
-	padding: 50px 0;
-
 	#schedule-D2 {
 		display: none;
 	}
@@ -375,8 +494,6 @@ main {
 /* ---------- FAQs SECTION ---------- */
 
 .faq {
-	padding-bottom: 80px;
-
 	.container {
 		@include flexcenter();
 		padding: 0 130px;
@@ -392,8 +509,6 @@ main {
 /* ---------- TEAM SECTION ---------- */
 
 .team {
-	padding-bottom: 90px;
-
 	h3.info {
 		text-align: center;
 		padding: 0 20px 50px 20px;
@@ -490,8 +605,6 @@ main {
 /* ---------- CONTACT SECTION ---------- */
 
 .contact {
-	padding-bottom: 100px;
-
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -523,7 +636,7 @@ main {
 				text-decoration: none;
 				opacity: 1;
 				color: $not-black-but-dark;
-				font-weight: 600;
+				font-weight: 700;
 
 				&:hover {
 					border-bottom: 7px solid $not-black-but-dark;
@@ -534,107 +647,3 @@ main {
 }
 
 /* ---------- CONTACT SECTION END ---------- */
-
-.themes {
-	padding-bottom: 70px;
-
-	.container {
-		margin-top: 100px;
-
-		display: flex;
-		flex-direction: column;
-		gap: 80px;
-
-		.row {
-			flex-wrap: wrap-reverse;
-
-			img {
-				width: 100%;
-			}
-
-			.info {
-				padding: 0 50px;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: flex-end;
-
-				.theme-title {
-					width: fit-content;
-					text-align: center;
-					font-size: 1.5rem;
-					font-weight: 700;
-
-					background-color: $not-black-but-dark;
-					color: #fff;
-					padding: 10px 20px;
-					border-radius: 10px;
-				}
-
-				.theme-info {
-					//background-color: lightgreen;
-					font-size: 1.2rem;
-					font-weight: 700;
-					color: rgba(0, 0, 0, 0.5);
-					//letter-spacing: 0.5px;
-					word-spacing: 3px;
-					text-align: right;
-				}
-			}
-		}
-
-		.left {
-			flex-direction: row-reverse;
-
-			.info {
-				align-items: flex-start;
-
-				.theme-info {
-					text-align: left;
-				}
-			}
-		} //use the alternate child psuedo class to do this
-	}
-}
-
-.prizes {
-	.container {
-		.col-md-4 {
-			@include flexcenter();
-		}
-
-		.prize-card {
-			height: 300px;
-			width: 300px;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-evenly;
-			align-items: center;
-
-			border-radius: 50px;
-
-			img {
-				transform: scale(0.8);
-			}
-
-			p {
-				text-align: center;
-				color: #fff;
-				font-size: 1.5rem;
-				font-weight: 700;
-			}
-		}
-
-		.first {
-			background-image: linear-gradient(to top, #0093e9 0%, #80d0c7 100%);
-		}
-
-		.second {
-			background-image: linear-gradient(to top, #43e97b 0%, #38f9d7 100%);
-		}
-
-		.third {
-			background-image: linear-gradient(to top, #f5576c 0%, #f093fb 100%);
-		}
-	}
-}
