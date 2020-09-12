@@ -596,3 +596,45 @@ main {
 		} //use the alternate child psuedo class to do this
 	}
 }
+
+.prizes {
+	.container {
+		.col-md-4 {
+			@include flexcenter();
+		}
+
+		.prize-card {
+			height: 300px;
+			width: 300px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+
+			border-radius: 50px;
+
+			img {
+				transform: scale(0.8);
+			}
+
+			p {
+				text-align: center;
+				color: #fff;
+				font-size: 1.5rem;
+				font-weight: 700;
+			}
+		}
+
+		.first {
+			background-image: linear-gradient(to top, #0093e9 0%, #80d0c7 100%);
+		}
+
+		.second {
+			background-image: linear-gradient(to top, #43e97b 0%, #38f9d7 100%);
+		}
+
+		.third {
+			background-image: linear-gradient(to top, #f5576c 0%, #f093fb 100%);
+		}
+	}
+}
