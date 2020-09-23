@@ -10,7 +10,7 @@ var options = {
 		'Test',
 		'Break',
 		'Learn',
-		'More Coffee',
+		'Coffee',
 		'Build',
 		'Deploy',
 		'Document',
