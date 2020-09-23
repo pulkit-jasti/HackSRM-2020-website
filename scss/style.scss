@@ -321,8 +321,10 @@ main {
 			border-radius: 50px;
 			transition-duration: 500ms;
 
+			transform: scale(0.8);
+
 			&:hover {
-				transform: scale(1.1);
+				transform: scale(0.9);
 			}
 
 			img {
@@ -338,7 +340,7 @@ main {
 		}
 
 		.first {
-			background-image: linear-gradient(to top, #0093e9 0%, #80d0c7 100%);
+			background-image: linear-gradient(to top, #0093e9 0%, #37d5d6 100%);
 		}
 
 		.second {
