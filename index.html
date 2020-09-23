@@ -24,6 +24,7 @@
 		<link rel="stylesheet" href="css/header.min.css" />
 		<link rel="stylesheet" href="css/schedule.min.css" />
 		<link rel="stylesheet" href="css/accordion.min.css" />
+		<link rel="stylesheet" href="css/canvas-particle.min.css" />
 
 		<title>HackSRM 2020</title>
 	</head>
@@ -55,6 +56,9 @@
 		<main>
 			<!-- ======= HERO ======= -->
 			<section id="hero" class="hero">
+				<div class="particle-background">
+					<canvas id="canvas-particles"></canvas>
+				</div>
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-6 left">
@@ -691,6 +695,8 @@
 			crossorigin="anonymous"
 		></script>
 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<!--<script
 			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -720,5 +726,6 @@
 		<script src="js/script.js"></script>
 		<script src="js/header.js"></script>
 		<script src="js/accordion.js"></script>
+		<script src="js/canvas-particle.js"></script>
 	</body>
 </html>

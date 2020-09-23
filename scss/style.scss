@@ -20,6 +20,8 @@ $silver: #f8f8f8;
 }
 
 body {
+	cursor: default;
+
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 
@@ -71,11 +73,15 @@ main {
 .hero {
 	height: 100vh;
 	width: 100%;
-	background-color: $not-black-but-dark;
+	background-color: #111013;
+	position: relative;
+	overflow: hidden;
 
 	.container-fluid {
 		height: 100%;
-		//background-color: lightskyblue;
+		//position: absolute;
+		//top: 0;
+		//left: 0;
 
 		.row {
 			height: 100%;
@@ -87,7 +93,7 @@ main {
 				//background-color: lightgreen;
 				display: flex;
 				flex-direction: column;
-				justify-content: space-evenly;
+				justify-content: space-between;
 
 				.typewriter-wrapper {
 					//for the cursor to appear in the same line as the typed text

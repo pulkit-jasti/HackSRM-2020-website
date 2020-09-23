@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600');
+
+$small-screen: 30em;
+$medium-screen: 48em;
+$large-screen: 62.5em;
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.particle-background {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+
+	#welcome {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		display: flex;
+		overflow: hidden;
+
+		header {
+			padding: 4rem 2rem 2rem;
+			position: relative;
+			z-index: 2;
+			width: 100%;
+
+			@media screen and (min-width: $small-screen) {
+				padding-top: 15vh;
+			}
+
+			@media screen and (min-width: $medium-screen) {
+				padding-top: 30vh;
+			}
+
+			@media screen and (min-width: $large-screen) {
+				max-width: 900px;
+				margin-left: 5rem;
+			}
+
+			> div {
+				padding-top: 2rem;
+				padding-left: 2rem;
+				position: relative;
+				width: 100%;
+				max-width: 800px;
+
+				&:before {
+					content: '';
+					display: block;
+					width: 2px;
+					height: 3000rem;
+					background: rgba(#070e14, 0.1);
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+
+		h1 {
+			color: #070e14;
+			padding-left: 2rem;
+			position: relative;
+			letter-spacing: -2px;
+
+			@media screen and (min-width: $large-screen) {
+				font-size: 50px;
+			}
+
+			svg {
+				display: inline-block;
+				width: 0.35em;
+				height: 0.35em;
+				color: #ff5507;
+				fill: currentColor;
+
+				position: absolute;
+				top: 1.7vw;
+				left: 0;
+
+				@media screen and (min-width: $large-screen) {
+					top: 20px;
+				}
+			}
+		}
+
+		p {
+			color: rgba(#070e14, 0.5);
+			line-height: 1.45;
+		}
+
+		canvas {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: -1;
+
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	button {
+		display: inline-block;
+		padding: 0;
+		background: none;
+		border: none;
+		color: rgba(#070e14, 0.3);
+		font-size: 12px;
+		margin-right: 0.1em;
+		cursor: pointer;
+
+		&:hover {
+			color: #ff5507;
+		}
+	}
+}
