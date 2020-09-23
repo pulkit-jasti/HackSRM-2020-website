@@ -19,6 +19,15 @@ $silver: #f8f8f8;
 	//font-family: monospace;
 }
 
+body {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
 .container-fluid {
 	padding: 0;
 }
@@ -29,6 +38,10 @@ $silver: #f8f8f8;
 	//https://stackoverflow.com/questions/47559916/bootstrap-4-row-extends-outside-of-container/52121389
 }
 
+main section {
+	padding: 60px 0;
+}
+
 .section-title {
 	margin: 50px 0;
 
@@ -37,30 +50,11 @@ $silver: #f8f8f8;
 	font-weight: 700;
 }
 
-body {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
-
-	&::-webkit-scrollbar {
-		display: none;
-	}
-}
-
-main section {
-	padding: 60px 0;
-}
-
 //MIXIN
 @mixin flexcenter {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-@mixin verticalCenter {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
 }
 
 //MAIN CSS
@@ -311,6 +305,7 @@ main {
 
 .prizes {
 	.container {
+		padding-top: 30px;
 		.col-md-4 {
 			@include flexcenter();
 		}
@@ -324,6 +319,11 @@ main {
 			align-items: center;
 
 			border-radius: 50px;
+			transition-duration: 500ms;
+
+			&:hover {
+				transform: scale(1.1);
+			}
 
 			img {
 				transform: scale(0.8);
