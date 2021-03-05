@@ -1,5 +1,3 @@
-# HackSRM-2020-website
-HackSRM 2020 Official Website
+# hacksrm.github.io
 
-
-https://pulkit-jasti.github.io/HackSRM-2020-website/
+### https://hacksrm.github.io/

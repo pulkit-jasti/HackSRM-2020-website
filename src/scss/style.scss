@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+/* font-family: 'Josefin Sans', sans-serif; */
+
 //COLORS
 $dark-red: #de5f5f;
 $bright-red: #ff5851;
@@ -16,18 +19,11 @@ $silver: #f8f8f8;
 	background-size: cover;
 	background-repeat: no-repeat;
 
-	//font-family: monospace;
+	transition-duration: 50ms;
 }
 
 body {
 	cursor: default;
-
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
-
-	&::-webkit-scrollbar {
-		display: none;
-	}
 }
 
 .container-fluid {
@@ -40,16 +36,17 @@ body {
 	//https://stackoverflow.com/questions/47559916/bootstrap-4-row-extends-outside-of-container/52121389
 }
 
-main section {
-	padding: 60px 0;
-}
-
 .section-title {
 	margin: 50px 0;
 
 	font-size: 5rem;
 	text-align: center;
 	font-weight: 700;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.sub-heading {
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 //MIXIN
@@ -61,11 +58,17 @@ main section {
 
 //MAIN CSS
 main {
-	//overflow-x: hidden;
-	//height: 100vh;
 	overflow-x: hidden;
 	width: 100%;
-	//background-color: lightcoral;
+
+	.page-section {
+		padding: 60px 0;
+		background-color: #fff;
+	}
+
+	.page-section:nth-child(2n + 0) {
+		background-color: #ffedd7;
+	}
 }
 
 /* ---------- HERO SECTION ---------- */
@@ -73,19 +76,15 @@ main {
 .hero {
 	height: 100vh;
 	width: 100%;
-	background-color: #111013;
+	background-color: #111013 !important;
 	position: relative;
 	overflow: hidden;
 
 	.container-fluid {
 		height: 100%;
-		//position: absolute;
-		//top: 0;
-		//left: 0;
 
 		.row {
 			height: 100%;
-			//background-color: lightsalmon;
 
 			.left {
 				height: 100%;
@@ -188,6 +187,11 @@ main {
 					flex-wrap: wrap;
 					justify-content: space-evenly;
 
+					a,
+					a:visited {
+						text-decoration: none !important;
+					}
+
 					button {
 						height: 55px;
 						min-width: 225px;
@@ -199,7 +203,7 @@ main {
 
 						outline: none;
 						border: none;
-						border-radius: 7px;
+						border-radius: 3px;
 
 						display: flex;
 						gap: 15px;
@@ -210,21 +214,8 @@ main {
 						}
 					}
 
-					.devfolio {
-						min-width: 265px;
-						background-color: #3770ff;
-
-						img {
-							height: 25px;
-						}
-
-						&:hover {
-							background-color: #2f60df;
-						}
-					}
-
 					.discord {
-						color: #7289d9;
+						color: #506dd4;
 						background-color: #fff;
 
 						img {
@@ -239,12 +230,38 @@ main {
 			}
 
 			.right {
+				padding: 50px;
 				height: 100%;
-				//background-color: lightpink;
 				@include flexcenter();
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: space-around;
+				//background-color: lightblue;
 
-				img {
-					width: 80%;
+				#logo-wrapper {
+					width: 100%;
+
+					img {
+						width: 80%;
+					}
+				}
+
+				.organiser-logo {
+					height: 100px;
+					padding-top: 40px;
+					margin-left: 50px;
+					color: #fff;
+
+					.logo-wrapper {
+						height: 100%;
+						margin-top: 20px;
+						display: flex;
+
+						img {
+							margin-right: 20px;
+							height: 100%;
+						}
+					}
 				}
 			}
 		}
@@ -260,20 +277,14 @@ main {
 /* ---------- ABOUT SECTION ---------- */
 
 .about {
+	padding-bottom: 80px !important;
+
 	.container-fluid {
 		.row {
 			justify-content: center;
 
-			div:first-child {
-				//margin-bottom: 70px;
-				//background-color: lightblue;
-			}
-
 			.col-md-8 {
-				//background-color: lightblue;
-
 				.title {
-					//background-color: lightcoral;
 					margin-bottom: 20px;
 
 					text-align: center;
@@ -282,7 +293,6 @@ main {
 				}
 
 				.content {
-					//background-color: lightgreen;
 					text-align: justify;
 					font-size: 1.5rem;
 
@@ -298,6 +308,34 @@ main {
 			margin-bottom: 50px !important; //TODO Make this more specific so that inportant is not required
 			//background-color: lightblue;
 		}
+
+		.button-wrapper {
+			margin-top: 60px;
+			@include flexcenter();
+
+			button {
+				padding: 15px 15px 11px 15px;
+				background-color: #000;
+
+				color: #fff;
+				font-weight: 700;
+				font-size: 1.1rem;
+				font-family: 'Josefin Sans', sans-serif;
+				letter-spacing: 1px;
+
+				outline: none;
+				border: none;
+				border-radius: 10px;
+
+				transition-duration: 300ms;
+				box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1);
+
+				&:active {
+					transform: scale(0.9, 0.9);
+					box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1);
+				}
+			}
+		}
 	}
 }
 
@@ -307,9 +345,87 @@ main {
 
 //
 
+/* ---------- GLIMPSE SECTION ---------- */
+
+.glimpse {
+	background-image: url('../../assets/images/glimpse/coding-background.jpg');
+	background-attachment: fixed;
+
+	.section-title {
+		margin-top: 0;
+		color: #fff;
+	}
+
+	.stats {
+		margin: 150px auto 50px auto;
+		//background-color: lightcoral;
+	}
+
+	.container {
+		//background-color: lightcoral;
+
+		.col-md-4 {
+			margin: 20px 0;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.box {
+				//background-color: lightblue;
+				padding: 20px 90px;
+				border-radius: 20px;
+
+				background: rgba(0, 0, 0, 0.3);
+				backdrop-filter: saturate(180%) blur(20px);
+				-webkit-backdrop-filter: saturate(180%) blur(20px);
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				p {
+					padding: 0;
+					margin: 0;
+				}
+
+				.icon {
+					font-size: 5rem;
+				}
+
+				.value {
+					color: #fff;
+					font-size: 4rem;
+					font-weight: 700;
+				}
+
+				.title {
+					color: #fff;
+					font-weight: 500;
+					font-size: 1.5rem;
+					letter-spacing: 1px;
+				}
+			}
+		}
+	}
+}
+
+/* ---------- GLIMPSE SECTION END ---------- */
+
+//
+
+//
+
 /* ---------- PRIZES SECTION ---------- */
 
 .prizes {
+	padding: 100px 0;
+	background-color: #ffedd7;
+
+	.section-title {
+		margin-top: 0;
+	}
 	.container {
 		padding-top: 30px;
 		.col-md-4 {
@@ -317,8 +433,11 @@ main {
 		}
 
 		.prize-card {
-			height: 300px;
-			width: 300px;
+			min-height: 500px;
+			height: 100%;
+			min-width: 400px;
+			padding: 40px 0;
+
 			display: flex;
 			flex-direction: column;
 			justify-content: space-evenly;
@@ -337,11 +456,25 @@ main {
 				transform: scale(0.8);
 			}
 
+			font-family: 'Josefin Sans', sans-serif;
+
 			p {
 				text-align: center;
 				color: #fff;
 				font-size: 1.5rem;
 				font-weight: 700;
+			}
+
+			ul {
+				margin-top: 20px;
+				padding: 0 40px 0 90px;
+
+				li {
+					color: #fff;
+					margin: 5px 0;
+					font-size: 1.4rem;
+					font-weight: 600;
+				}
 			}
 		}
 
@@ -355,6 +488,74 @@ main {
 
 		.third {
 			background-image: linear-gradient(to top, #f5576c 0%, #f093fb 100%);
+		}
+
+		.sub-heading {
+			margin: 80px 0 50px 0;
+			text-align: center;
+			font-size: 3.5rem;
+			font-weight: 700;
+		}
+
+		.row {
+			justify-content: center;
+		}
+
+		.col-md-6 {
+			//background-color: lightcoral;
+			padding: 20px;
+			$border-radius: 30px;
+
+			.cprize-card {
+				height: 100%;
+				padding: 20px 30px 30px 30px;
+				background-color: #222;
+				border-radius: $border-radius;
+				box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1);
+				color: #fff;
+
+				@include flexcenter();
+				flex-direction: column;
+
+				.prize-title {
+					text-align: center;
+					margin-bottom: 20px;
+					word-spacing: 5px;
+				}
+
+				.box-wrapper {
+					width: 100%;
+					height: 100%;
+					padding: 4px;
+					background: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+					border-radius: $border-radius - 10px;
+
+					.box {
+						height: 100%;
+						padding: 20px;
+						background-color: #222;
+						border-radius: $border-radius - 15px;
+
+						p {
+							margin: 5px 0;
+						}
+
+						p.category-prize-info {
+							text-align: center;
+							font-weight: 600;
+							font-size: 1.2rem;
+						}
+					}
+				}
+			}
+		}
+
+		.sub {
+			margin: 0;
+			margin-top: 80px;
+			text-align: center;
+			font-size: 2.5rem;
+			//color: #000;
 		}
 	}
 }
@@ -405,10 +606,11 @@ main {
 					//background-color: lightgreen;
 					font-size: 1.2rem;
 					font-weight: 700;
-					color: rgba(0, 0, 0, 0.5);
+					opacity: 0.5;
 					//letter-spacing: 0.5px;
 					word-spacing: 3px;
 					text-align: right;
+					font-family: 'Josefin Sans', sans-serif;
 				}
 			}
 		}
@@ -440,6 +642,10 @@ main {
 		display: none;
 	}
 
+	#schedule-D3 {
+		display: none;
+	}
+
 	.timeline {
 		.container- {
 			.text-wrapper {
@@ -450,7 +656,7 @@ main {
 				h2 {
 					p {
 						margin-top: 5px;
-						color: rgba(0, 0, 0, 0.5);
+						opacity: 0.5;
 						font-weight: 400;
 					}
 				}
@@ -464,9 +670,10 @@ main {
 
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		gap: 20px;
 
-		button {
+		.day-button {
 			padding: 10px 50px;
 			background-color: #000;
 
@@ -505,6 +712,8 @@ main {
 	.container {
 		@include flexcenter();
 		padding: 0 130px;
+
+		font-family: 'Josefin Sans', sans-serif !important;
 	}
 }
 
@@ -514,14 +723,127 @@ main {
 
 //
 
+/* ---------- SPONSORS SECTION ---------- */
+
+.sponsors {
+	.container {
+		//background-color: lightblue;
+
+		.tier-title-wrapper {
+			margin: 50px 0 40px 0;
+			position: relative;
+			@include flexcenter();
+			flex-direction: column;
+
+			.tier-title {
+				position: relative;
+				//left: 50%;
+				//padding: 20px 0 0 0;
+				padding-top: 15px !important;
+				margin: 0;
+				transform: translate(0%, 50%);
+
+				width: min-content;
+				padding: 10px 30px;
+				background-color: #000;
+				border-radius: 500px;
+
+				color: #fff;
+				font-size: 1.2rem;
+				font-weight: 500;
+				letter-spacing: 1.5px;
+				font-family: 'Josefin Sans', sans-serif;
+			}
+
+			.line {
+				height: 2px;
+				width: 70%;
+				border-radius: 200px;
+				background-color: rgba(0, 0, 0, 0.2);
+			}
+		}
+
+		.row {
+			justify-content: center;
+
+			.col-md-4 {
+				position: relative;
+				margin: 40px 0;
+				overflow: hidden;
+				//background-color: lightgreen;
+				@include flexcenter();
+
+				img {
+					position: relative;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 80%;
+				}
+
+				#gmc {
+					width: 100%;
+				}
+
+				#framer {
+					@include flexcenter();
+					text-decoration: none;
+
+					img {
+						width: 25%;
+						left: unset;
+						transform: unset;
+					}
+
+					p {
+						padding-top: 10px;
+						font-size: 2.3rem;
+						font-weight: 700;
+						color: #000;
+						font-family: Arial, Helvetica, sans-serif;
+					}
+				}
+
+				#jetbrains {
+					width: 50%;
+				}
+
+				#fold {
+					transform: scale(1.4) translateX(-40%);
+				}
+
+				#zubi {
+					height: 100px;
+					width: 100px;
+				}
+			}
+		}
+	}
+}
+
+/* ---------- SPONSORS SECTION END ---------- */
+
+//
+
+//
+
 /* ---------- TEAM SECTION ---------- */
 
 .team {
+	.container-fluid {
+		padding: 50px;
+	}
 	h3.info {
 		text-align: center;
 		padding: 0 20px 50px 20px;
 
 		font-size: 1.5rem;
+	}
+
+	h3.sub-heading {
+		margin-top: 80px;
+		text-align: center;
+		font-size: 3.5rem;
+		font-weight: 700;
 	}
 
 	.card-container {
@@ -535,8 +857,8 @@ main {
 		//background-color: lightblue;
 
 		.team-card {
-			height: 350px;
-			width: 250px;
+			height: 300px;
+			width: 200px;
 			//background-color: lightblue;
 
 			display: flex;
@@ -562,12 +884,13 @@ main {
 			}
 
 			.name {
-				padding: 5px 20px;
+				padding: 9px 20px 5px 20px;
 				background-color: #000;
 
 				color: #fff;
 				font-weight: 500;
 				letter-spacing: 1px;
+				font-family: 'Josefin Sans', sans-serif;
 
 				border-radius: 10px;
 
@@ -613,6 +936,8 @@ main {
 /* ---------- CONTACT SECTION ---------- */
 
 .contact {
+	padding-bottom: 130px !important;
+
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -627,12 +952,63 @@ main {
 			}
 		}
 
-		.info {
-			margin-top: 60px;
+		.sub {
 			font-size: 2rem;
-			font-weight: 700;
-			color: rgba(0, 0, 0, 0.8);
+			font-weight: 600;
+			//color: rgba(0, 0, 0, 0.8);
+			//opacity: 0.5;
 			text-align: center;
+		}
+
+		.info-container {
+			width: 100%;
+			margin: 70px 0;
+
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 50px;
+
+			.info-wrapper {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+
+				.icon {
+					height: 100px;
+					width: 100px;
+					padding-top: 3px;
+					//background-color: rgba(255, 255, 255, 0.1);
+					background-color: rgba(0, 0, 0, 0.2);
+					@include flexcenter();
+
+					border-radius: 500px;
+
+					img {
+						width: 50%;
+					}
+				}
+
+				.title {
+					margin: 15px 0 7px 0;
+					font-weight: 700;
+					font-size: 1.5rem;
+				}
+
+				.info {
+					font-weight: 600;
+					font-size: 1.2rem;
+
+					a {
+						text-decoration: none;
+						color: #000;
+
+						&:hover {
+							color: rgba(0, 0, 0, 0.8);
+						}
+					}
+				}
+			}
 		}
 
 		.email {

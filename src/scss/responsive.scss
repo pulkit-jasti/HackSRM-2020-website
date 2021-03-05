@@ -66,7 +66,15 @@
 				}
 
 				.right {
-					margin-top: 80px;
+					margin-top: 0px;
+
+					.organiser-logo {
+						//background-color: lightcoral;
+						padding-left: -30px;
+						height: 90px;
+						//padding: 0;
+						margin: 0;
+					}
 				}
 			}
 		}
@@ -76,10 +84,33 @@
 		padding: 30px 10px;
 	}
 
+	.glimpse {
+		#slider {
+			height: 150px;
+		}
+
+		.stats {
+			margin: 40px auto 0px auto;
+		}
+	}
+
 	.prizes {
 		.container {
 			.col-md-4 {
-				margin-bottom: 50px;
+				margin: -20px 0;
+			}
+
+			.prize-card {
+				min-height: unset;
+				margin: 0 !important;
+
+				&:hover {
+					transform: unset !important;
+				}
+			}
+
+			.box-wrapper {
+				font-size: 1.3rem;
 			}
 		}
 	}
@@ -145,6 +176,7 @@
 	}
 
 	.contact {
+		padding-bottom: 150px !important;
 		.container {
 			.image-container {
 				margin: 0;
@@ -159,6 +191,27 @@
 				font-weight: 400;
 				font-size: 2rem;
 			}
+		}
+	}
+
+	footer {
+		.content {
+			.container-fluid {
+				padding-top: 30px !important;
+
+				.copyright-info {
+					margin-top: 60px !important;
+				}
+			}
+		}
+		.logo-wrapper {
+			margin-bottom: 40px;
+			img {
+				width: 100px;
+			}
+		}
+		.menu {
+			margin-bottom: 40px;
 		}
 	}
 }

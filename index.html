@@ -5,9 +5,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+		<!-- TabIcon -->
 		<link rel="icon" href="assets/icons/favicon.png" />
 
-		<!-- Bootstrap CSS -->
+		<!-- Bootstrap -->
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -15,20 +16,31 @@
 			crossorigin="anonymous"
 		/>
 
-		<!--vendor css-->
+		<!-- Font Awesome 4 -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 		<!--main css-->
-		<link rel="stylesheet" href="css/style.min.css" />
-		<link rel="stylesheet" href="css/responsive.min.css" />
-		<link rel="stylesheet" href="css/header.min.css" />
-		<link rel="stylesheet" href="css/schedule.min.css" />
-		<link rel="stylesheet" href="css/accordion.min.css" />
-		<link rel="stylesheet" href="css/canvas-particle.min.css" />
+		<link rel="stylesheet" href="dist/css/style.min.css" />
+		<link rel="stylesheet" href="dist/css/responsive.min.css" />
+		<link rel="stylesheet" href="dist/css/header.min.css" />
+		<link rel="stylesheet" href="dist/css/schedule.min.css" />
+		<link rel="stylesheet" href="dist/css/accordion.min.css" />
+		<link rel="stylesheet" href="dist/css/canvas-particle.min.css" />
+		<link rel="stylesheet" href="dist/css/carousel.min.css" />
+		<link rel="stylesheet" href="dist/css/devfolio.css" />
+		<link rel="stylesheet" href="dist/css/footer.min.css" />
+		<link rel="stylesheet" href="dist/css/darkmode.min.css" />
+		<link rel="stylesheet" href="dist/css/scrollbar.min.css" />
+		<link rel="stylesheet" href="dist/css/webinar.min.css" />
 
-		<title>HackSRM 2020</title>
+		<title>HackSRM 3.0</title>
 	</head>
 	<body>
+		<div id="darkmode-toggle">
+			<span>💡</span>
+			<p id="tltip">I ❤️ Dark mode</p>
+		</div>
+
 		<!-- ======= Header ======= -->
 		<header>
 			<div class="burger-container">
@@ -37,16 +49,14 @@
 					<div class="bar btmBar"></div>
 				</div>
 			</div>
-			<div class="icon icon-apple"><img src="#" alt="" /></div>
 			<ul class="menu">
-				<li class="logo-laptop"><img src="#" alt="" /></li>
 				<li class="menu-item"><a href="#hero">Home</a></li>
 				<li class="menu-item"><a href="#about">About</a></li>
 				<li class="menu-item"><a href="#prizes">Prizes</a></li>
 				<li class="menu-item"><a href="#themes">Themes</a></li>
 				<li class="menu-item"><a href="#schedule">Schedule</a></li>
-				<li class="menu-item"><a href="#sponsors">Sponsors</a></li>
 				<li class="menu-item"><a href="#faq">FAQs</a></li>
+				<li class="menu-item"><a href="#sponsors">Sponsors</a></li>
 				<li class="menu-item"><a href="#team">Team</a></li>
 				<li class="menu-item"><a href="#contact">Contact Us</a></li>
 			</ul>
@@ -55,7 +65,7 @@
 
 		<main>
 			<!-- ======= HERO ======= -->
-			<section id="hero" class="hero">
+			<section id="hero" class="hero page-section">
 				<div class="particle-background">
 					<canvas id="canvas-particles"></canvas>
 				</div>
@@ -73,32 +83,32 @@
 									</div>
 									<div class="date">
 										<!--<i class="fa fa-calendar" aria-hidden="true"></i>-->
-										<span>📅 7th-8th November</span>
+										<span>📅 20th-22th November</span>
 									</div>
 								</div>
 							</div>
 
 							<div class="starts-in">
-								<span>Hackathon Starts In ⏰</span>
+								<span id="startsIn">Hackathon Ends In ⏰</span>
 								<div class="main">
 									<div class="time-wrapper">
 										<div class="time">
-											<div class="box">0</div>
-											<div class="box">0</div>
+											<div id="dayTens" class="box">0</div>
+											<div id="dayOnes" class="box">0</div>
 										</div>
 										<span>Days</span>
 									</div>
 									<div class="time-wrapper">
 										<div class="time">
-											<div class="box">0</div>
-											<div class="box">0</div>
+											<div id="hourTens" class="box">0</div>
+											<div id="hourOnes" class="box">0</div>
 										</div>
 										<span>Hours</span>
 									</div>
 									<div class="time-wrapper">
 										<div class="time">
-											<div class="box">0</div>
-											<div class="box">0</div>
+											<div id="minTens" class="box">0</div>
+											<div id="minOnes" class="box">0</div>
 										</div>
 										<span>Minutes</span>
 									</div>
@@ -106,18 +116,43 @@
 							</div>
 
 							<div class="btn-wrapper">
-								<button class="devfolio">
-									<img src="assets/icons/devfolio.svg" alt="" />
-									<span>Apply with Devfolio</span>
+								<button id="devfolio-apply-now">
+									<svg
+										class="logo"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="#fff"
+										viewBox="0 0 115.46 123.46"
+										style="height: 24px; width: 24px; margin-right: 8px"
+									>
+										<path
+											d="M115.46 68a55.43 55.43 0 0 1-50.85 55.11S28.12 124 16 123a12.6 12.6 0 0 1-10.09-7.5 15.85 15.85 0 0 0 5.36 1.5c4 .34 10.72.51 20.13.51 13.82 0 28.84-.38 29-.38h.26a60.14 60.14 0 0 0 54.72-52.47c.05 1.05.08 2.18.08 3.34z"
+										/>
+										<path
+											d="M110.93 55.87A55.43 55.43 0 0 1 60.08 111s-36.48.92-48.58-.12C5 110.29.15 104.22 0 97.52l.2-83.84C.38 7 5.26.94 11.76.41c12.11-1 48.59.12 48.59.12a55.41 55.41 0 0 1 50.58 55.34z"
+										/>
+									</svg>
+									Apply with Devfolio
 								</button>
-								<button class="discord">
-									<img src="assets/icons/discord.svg" alt="" />
-									<span>Join our server</span>
-								</button>
+
+								<a href="https://discord.gg/eSZDZ3k">
+									<button class="discord">
+										<img src="assets/icons/discord.svg" alt="" />
+										<span>Join our server</span>
+									</button>
+								</a>
 							</div>
 						</div>
 						<div class="col-md-6 right">
-							<img src="assets/images/logo.png" alt="" />
+							<div id="logo-wrapper">
+								<img src="assets/images/logo.png" alt="" />
+							</div>
+							<div class="organiser-logo">
+								<h4>Organised by students of</h4>
+								<div class="logo-wrapper">
+									<img src="assets/images/ntl.png" alt="" />
+									<img src="assets/images/srmap.png" alt="" />
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -125,7 +160,7 @@
 			<!-- END HERO -->
 
 			<!-- ======= ABOUT ======= -->
-			<section id="about" class="about">
+			<section id="about" class="about page-section dark-mode">
 				<div class="container-fluid">
 					<div class="row first">
 						<div class="col-md-8">
@@ -133,7 +168,7 @@
 							<div class="content">
 								Welcome to HackSRM! <b>HackSRM</b> is a premium student 🎓 led national level hackathon 🖥️ held in India that aims to
 								gather the great student minds under one roof and solve potential <b>real world problem</b> through technology 👨‍💻
-								under <b>42 hours</b> 🕒. We belong to the technological hub of the country where marvels of <b>innovation</b> ⚙️ and
+								under <b>45 hours</b> 🕒. We belong to the technological hub of the country where marvels of <b>innovation</b> ⚙️ and
 								<b>creativity</b> 💡 have always been celebrated, HackSRM is one such celebration. HackSRM is a platform for young
 								geniuses 🧠 to not only exercise their skills to the topmost level but also to build a better tomorrow by ideating,
 								constructing and innovating vast <b>solutions</b>.
@@ -144,11 +179,72 @@
 						<div class="col-md-8">
 							<div class="title">Why HackSRM</div>
 							<div class="content">
-								<b>HackSRM</b> is the perfect blend of imagination 💡, novelty and fun. The 42 hour ⏳ non-stop technical festival
+								<b>HackSRM</b> is the perfect blend of imagination 💡, novelty and fun. The 45 hour ⏳ non-stop technical festival
 								will host an amazing panel of <b>speakers</b> 🤵, <b>sponsors</b> 💰 and <b>swag</b> 👕 ;). With exciting goodies, you
 								are destined to have a mindful of pure genius. If this is your <b>first ever hackathon</b> , we will make sure you
 								have an enriching and memorable experience 🔥 that you will cherish for days to come. <br /><br />
 								<div>So join us on this path of epicness! ✨</div>
+							</div>
+						</div>
+					</div>
+					<div class="button-wrapper">
+						<a href="assets/coc/code-of-conduct.pdf" target="_blank">
+							<button>Code Of Conduct</button>
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- END ABOUT -->
+
+			<!-- ======= ABOUT ======= -->
+			<section class="page-section glimpse">
+				<p class="section-title">Glimpse of HackSRM 2.0</p>
+				<div class="container">
+					<div id="slider">
+						<input type="radio" name="slider" id="s1" checked />
+						<input type="radio" name="slider" id="s2" />
+						<input type="radio" name="slider" id="s3" />
+						<input type="radio" name="slider" id="s4" />
+						<input type="radio" name="slider" id="s5" />
+
+						<label for="s1" id="slide1">
+							<img src="assets/images/glimpse/1.JPG" alt="" />
+						</label>
+						<label for="s2" id="slide2">
+							<img src="assets/images/glimpse/2.JPG" alt="" />
+						</label>
+						<label for="s3" id="slide3">
+							<img src="assets/images/glimpse/3.JPG" alt="" />
+						</label>
+						<label for="s4" id="slide4">
+							<img src="assets/images/glimpse/4.JPG" alt="" />
+						</label>
+						<label for="s5" id="slide5">
+							<img src="assets/images/glimpse/5.JPG" alt="" />
+						</label>
+					</div>
+				</div>
+				<div class="container stats">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="box">
+								<p class="icon">💻</p>
+								<p class="value">44</p>
+								<p class="title">Teams</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="box">
+								<p class="icon">👨‍💻</p>
+								<p class="value">144</p>
+								<p class="title">Hackers</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="box">
+								<p class="icon">🌏</p>
+								<p class="value">29</p>
+								<p class="title">States</p>
 							</div>
 						</div>
 					</div>
@@ -157,7 +253,7 @@
 			<!-- END ABOUT -->
 
 			<!-- ======= PRIZES ======= -->
-			<section id="prizes" class="prizes">
+			<section id="prizes" class="prizes dark-mode">
 				<h2 class="section-title">Prizes 🎁</h2>
 				<div class="container">
 					<div class="row">
@@ -167,6 +263,15 @@
 								<div>
 									<p>1st Prize! <br />INR 15,000</p>
 								</div>
+								<ul>
+									<li>6 months free 1Password family subscription.</li>
+
+									<li>Coding Blocks 90% off discount coupons</li>
+									<li>CipherSchools 85% off discount coupons</li>
+									<li>Swags from Devfolio</li>
+									<li>Fold Premium access*</li>
+									<li>Internship and Full-time opportunities</li>
+								</ul>
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -175,13 +280,186 @@
 								<div>
 									<p>2nd Prize! <br />INR 10,000</p>
 								</div>
+								<ul>
+									<li>Swags from Devfolio</li>
+									<li>Coding Blocks 80% off discount coupons</li>
+									<li>CipherSchools 75% off discount coupons</li>
+									<li>Fold Premium access*</li>
+									<li>Internship and Full-time opportunities</li>
+								</ul>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="prize-card third">
 								<img src="assets/images/prizes/third-1.png" alt="" />
 								<div>
-									<p>3rd Prize! <br />INR 7,000</p>
+									<p>3rd Prize! <br />INR 6,000</p>
+								</div>
+								<ul>
+									<li>Swags from Devfolio</li>
+									<li>Coding Blocks 70% off discount coupons</li>
+									<li>CipherSchools 65% off discount coupons</li>
+									<li>Fold Premium access*</li>
+									<li>Internship and Full-time opportunities</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<div class="cprize-card">
+								<h3 class="prize-title">Prizes for the Finalists</h3>
+								<div class="box-wrapper">
+									<div class="box">
+										<p>1. 1500 free API calls on sawolabs.com</p>
+										<p>2. One Personal Edition plus a one-year subscription to Wolfram|Alpha Pro.(Finalists)</p>
+										<p>3. 50%off course coupons for all participants to be decided by Zubi (With INR 700 cashback on WazirX)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="cprize-card">
+								<h3 class="prize-title">Prizes for all participants</h3>
+								<div class="box-wrapper">
+									<div class="box">
+										<p>1. Certificate of participation</p>
+										<p>2. Jetbrains all student pack worth $649</p>
+										<p>3. Nimblebox cloud credits worth $100</p>
+										<p>4. 30 Days License Wolfarm|Alpha Pro</p>
+										<p>5. Coding Blocks 55% Discount Coupons</p>
+										<p>6. repl.it 3 Months Hackerplan</p>
+										<p>7. Linode promo code worth $20</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<p class="sub-heading">Sponsor Challenges</p>
+
+					<div class="row">
+						<div class="col-md-6">
+							<div class="cprize-card">
+								<h3 class="prize-title">Ethereum-Matic Bounty</h3>
+								<div class="box-wrapper">
+									<div class="box">
+										<p>1. Best hack built on top of Ethereum (Rs.10000)</p>
+										<p>2. For teams that integrate Matic in their hacks as well the prize money will be higher (Rs.15000)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="cprize-card">
+								<h3 class="prize-title">Best Dapp on Tezos</h3>
+								<div class="box-wrapper">
+									<div class="box">
+										<p>1. 10000 INR for best Dapp built on Tezos</p>
+										<p>2. 5000 INR for Runners-up</p>
+										<p>3. Continuity Grant opportunity for exceptional builders</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="cprize-card">
+								<h3 class="prize-title">Best AR/VR Hack by echoAR</h3>
+								<div class="box-wrapper">
+									<div class="box">
+										<p>1. $50 amazon gift card from echoAR</p>
+										<p>2. 1-month free business tier access for echoAR</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="cprize-card">
+								<h3 class="prize-title">Best Dapp on Portis</h3>
+								<div class="box-wrapper">
+									<div class="box">
+										<p>1. 200 USD (in crypto) for best Dapp built on Portis</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="cprize-card">
+								<h3 class="prize-title">Prize from nimblebox.ai</h3>
+								<div class="box-wrapper">
+									<div class="box">
+										<p>
+											1. $100 gift card from nimblebox.ai to the winning team
+											<br />
+											(Winners MUST use the nimblebox.ai platform as part of their project to be eligible for a reward).
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="cprize-card">
+								<h3 class="prize-title">Best Computer Vision Hack by OurEye.ai</h3>
+								<div class="box-wrapper">
+									<div class="box">
+										<p>Rs 10,000 for the best hack in detection of body/health related parameters with the help of computer vision</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<p class="sub-heading">Category prizes</p>
+
+					<div class="row">
+						<div class="col-md-6">
+							<div class="cprize-card">
+								<h3 class="prize-title">Best Healthcare Hack 💉</h3>
+								<div class="box-wrapper">
+									<div class="box">
+										<p class="category-prize-info">Cash prize of INR 1000</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="cprize-card">
+								<h3 class="prize-title">Best Fin-Tech Hack 💲</h3>
+								<div class="box-wrapper">
+									<div class="box">
+										<p class="category-prize-info">Cash prize of INR 1000</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="cprize-card">
+								<h3 class="prize-title">Best Ed-Tech Hack 📚</h3>
+								<div class="box-wrapper">
+									<div class="box">
+										<p class="category-prize-info">Cash prize of INR 1000</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="cprize-card">
+								<h3 class="prize-title">Best All Girls Team 👧</h3>
+								<div class="box-wrapper">
+									<div class="box">
+										<p class="category-prize-info">Cash prize of INR 1000</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="cprize-card">
+								<h3 class="prize-title">Best Travel and Tourism Hack 🗺️</h3>
+								<div class="box-wrapper">
+									<div class="box">
+										<p class="category-prize-info">Cash prize of INR 1000</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -191,7 +469,7 @@
 			<!-- END PRIZES -->
 
 			<!-- ======= THEMES ======= -->
-			<section id="themes" class="themes">
+			<section id="themes" class="themes page-section dark-mode">
 				<h2 class="section-title">Themes 🎨</h2>
 				<div class="container">
 					<div class="theme-container">
@@ -225,9 +503,9 @@
 					<div class="theme-container">
 						<div class="row left">
 							<div class="col-md-8 info">
-								<p class="theme-title">Covid-19</p>
+								<p class="theme-title">Healthcare</p>
 								<p class="theme-info">
-									Code against COVID, aim for real-life challenges and draw solutions that can drive social impact
+									Code against health problems, aim for real-life challenges and draw solutions that can drive social impact
 								</p>
 							</div>
 							<div class="col-md-4 image">
@@ -282,107 +560,168 @@
 			<!-- END TRACKS -->
 
 			<!-- ======= SCHEDULE ======= -->
-			<section id="schedule" class="schedule">
+			<section id="schedule" class="schedule page-section dark-mode">
 				<h2 class="section-title">Schedule ⌚</h2>
 				<div class="btn-wrapper">
-					<button id="day-1">Day-1</button>
-					<button id="day-2">Day-2</button>
+					<button id="day-1" class="day-button">Day-1</button>
+					<button id="day-2" class="day-button">Day-2</button>
+					<button id="day-3" class="day-button">Day-3</button>
 				</div>
+
+				<!-- DAY 1 SCHEDULE -->
 				<div id="schedule-D1">
 					<div class="timeline">
-						<div class="container- right" data-aos="fade-up">
+						<div class="container- right">
 							<div class="text-wrapper">
 								<h2 class="day-num">DAY 1️⃣</h2>
 							</div>
 						</div>
-
-						<div class="container- right" data-aos="fade-up">
+						<div class="container- right">
 							<div class="text-wrapper">
 								<h2>
-									Lunch 🍛
-									<p>12:00PM - 2:00PM</p>
+									Hackathon Begins
+									<p>6:30 PM</p>
 								</h2>
-								<p>Lunch catered by campus mess.</p>
 							</div>
 						</div>
 
-						<div class="container- right" data-aos="fade-up">
+						<div class="container- right">
 							<div class="text-wrapper">
 								<h2>
-									Hackathon Begins 💻
-									<p>2:00PM Onwards</p>
+									Inauguration 🏁
+									<p>6:30 PM - 7:30 PM</p>
 								</h2>
-								<p>Brief introduction about rules and regulations and start brainstorm, implement ideas, code the application.</p>
+								<p>Welcome speech, intro to judges, intro to team, Hackathon rules and regulations</p>
 							</div>
 						</div>
 
-						<div class="container- right" data-aos="fade-up">
+						<div class="container- right">
 							<div class="text-wrapper">
 								<h2>
-									First Commit ✅
-									<p>2:00PM - 4:00PM</p>
+									Round-1 ⌨️✅
+									<p>10:00 PM - 12:00 AM</p>
+									<p>Idea and Project name submission</p>
 								</h2>
-								<p>Hackers should submit their finalised idea and work for the rest of the hackathon.</p>
-							</div>
-						</div>
-
-						<div class="container- right" data-aos="fade-up">
-							<div class="text-wrapper">
-								<h2>
-									Refreshments / Hack 🍔
-									<p>5:00PM to 5:30PM</p>
-								</h2>
-								<p>Snacks will be served and continue hacking.</p>
+								<p></p>
 							</div>
 						</div>
 					</div>
 				</div>
 
+				<!-- DAY 2 SCHEDULE -->
 				<div id="schedule-D2">
 					<div class="timeline">
-						<div class="container- right" data-aos="fade-up">
+						<div class="container- right">
 							<div class="text-wrapper">
 								<h2 class="day-num">DAY 2️⃣</h2>
 							</div>
 						</div>
 
-						<div class="container- right" data-aos="fade-up">
+						<!--<div class="container- right">
 							<div class="text-wrapper">
 								<h2>
-									Second Commit ✅
-									<p>5:00AM - 12:00PM</p>
+									First Commit ✅
+									<p>12:00 AM - 12:30 AM</p>
+								</h2>
+								<p>Hackers should submit their finalised idea and work for the rest of the hackathon.</p>
+							</div>
+						</div>-->
+
+						<div class="container- right">
+							<div class="text-wrapper">
+								<h2>
+									Amusement Activities Evaluation 🕹️
+									<p>3:00 PM - 6:00 PM</p>
+								</h2>
+								<p>Games, Kahoot, Events</p>
+							</div>
+						</div>
+
+						<div class="container- right">
+							<div class="text-wrapper">
+								<h2>
+									Mentor Evaluation
+									<p>6:00 PM - Onwards</p>
 								</h2>
 								<p>Hackers are required to submit their performed code.</p>
 							</div>
 						</div>
-
-						<div class="container- right" data-aos="fade-up">
+						<div class="container- right">
 							<div class="text-wrapper">
 								<h2>
-									Breakfast 🥣
-									<p>2:00PM 3:00PM</p>
+									echoAR Workshop 💻
+									<p>9:30 PM - 10:30 PM</p>
 								</h2>
-								<p>Breakfast will be served by campus mess.</p>
+								<p>How to Build a Cloud-Connected AR/VR App in 15 Minutes or Less</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- DAY 3 SCHEDULE -->
+				<div id="schedule-D3">
+					<div class="timeline">
+						<div class="container- right">
+							<div class="text-wrapper">
+								<h2 class="day-num">DAY 3️⃣</h2>
+							</div>
+						</div>
+						<div class="container- right">
+							<div class="text-wrapper">
+								<h2>
+									SAWOlabs Webinar 💻
+									<p>9:30 PM - 10:30 PM</p>
+								</h2>
+								<p>Passwordless Authentication with SAWOLabs</p>
+							</div>
+						</div>
+						<div class="container- right">
+							<div class="text-wrapper">
+								<h2>
+									Round 2 ✅
+									<p>11:30 AM</p>
+								</h2>
+								<p>Final commit, after which no submissions will be accepted</p>
 							</div>
 						</div>
 
-						<div class="container- right" data-aos="fade-up">
+						<div class="container- right">
 							<div class="text-wrapper">
 								<h2>
-									Evaluation 📈
-									<p>3:00PM - 6:00PM</p>
+									Announcement of top 10 📈
+									<p>12:30 PM</p>
 								</h2>
-								<p>Inspection by judges and teams are finalized.</p>
+								<p>Announcement of top 10 on all social media platforms</p>
 							</div>
 						</div>
 
-						<div class="container- right" data-aos="fade-up">
+						<div class="container- right">
 							<div class="text-wrapper">
 								<h2>
-									Prize Announcement 🥇
-									<p>7:00PM</p>
+									Pitch session 🎤
+									<p>1:30 PM - Onwards</p>
 								</h2>
-								<p>Pitching up ideas and each team is given 5 minutes to present.</p>
+								<p>Participants have to pitch their ideas in front of judges on a video call</p>
+							</div>
+						</div>
+
+						<div class="container- right">
+							<div class="text-wrapper">
+								<h2>
+									End of Pitch 🍨
+									<p>4:00 PM</p>
+								</h2>
+								<p>End of Pitch and talk by judges</p>
+							</div>
+						</div>
+
+						<div class="container- right">
+							<div class="text-wrapper">
+								<h2>
+									Announcement of Winners 🥇
+									<p>6:00 PM - 9:00 PM</p>
+								</h2>
+								<p>Final winners will be announced on the website and on all social media platforms</p>
 							</div>
 						</div>
 					</div>
@@ -390,14 +729,51 @@
 			</section>
 			<!-- END SCHEDULE -->
 
-			<!-- ======= SPONSORS ======= -->
-			<!--<section id="sponsors" class="sponsors">
-				<div class="section-title">Sponsors</div>
-			</section>-->
-			<!-- END SPONSORSV-->
+			<!-- ======= WEBINARS ======= -->
+
+			<section id="webinar" class="webinar page-section dark-mode">
+				<h3 class="section-title">Webinars</h3>
+				<div class="container-fluid">
+					<div class="containerr">
+						<div class="carousel">
+							<input type="radio" id="carousel-1" name="carousel[]" checked />
+							<input type="radio" id="carousel-2" name="carousel[]" />
+							<input type="radio" id="carousel-3" name="carousel[]" />
+							<ul class="carousel__items">
+								<li class="carousel__item">
+									<img src="assets/images/webinars/ayon.jpeg" alt="" />
+								</li>
+								<li class="carousel__item">
+									<img src="assets/images/webinars/alon.jpeg" alt="" />
+								</li>
+								<li class="carousel__item">
+									<img src="assets/images/webinars/sawo.jpeg" alt="" />
+								</li>
+							</ul>
+							<div class="carousel__prev">
+								<label for="carousel-1"></label>
+								<label for="carousel-2"></label>
+								<label for="carousel-3"></label>
+							</div>
+							<div class="carousel__next">
+								<label for="carousel-1"></label>
+								<label for="carousel-2"></label>
+								<label for="carousel-3"></label>
+							</div>
+							<div class="carousel__nav">
+								<label for="carousel-1"></label>
+								<label for="carousel-2"></label>
+								<label for="carousel-3"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ======= WEBINARS END ======= -->
 
 			<!-- ======= FAQs ======= -->
-			<section id="faq" class="faq">
+			<section id="faq" class="faq page-section dark-mode">
 				<div class="section-title">FAQs 🙋</div>
 				<div class="container-fluid">
 					<ul id="accordion" class="accordion">
@@ -408,9 +784,9 @@
 							</div>
 							<ul class="submenu">
 								<li class="answer">
-									A hackathon is a programming competition in which competitors use technology to build innovative projects within
-									36 hours. There will be opportunities to win cool prizes, learn from our key-note speakers, and network with our
-									sponsors.
+									A hackathon is a programming competition in which competitors use technology to build innovative projects within a
+									fixed time duration. There will be opportunities to win cool prizes, learn from our key-note speakers, and network
+									with our sponsors.
 								</li>
 							</ul>
 						</li>
@@ -445,7 +821,7 @@
 							</div>
 							<ul class="submenu">
 								<li class="answer">
-									Zero. Zip. Zilch. Nada. Nothing. Admission to BitFlip is completely free, thanks to our sponsors!
+									Zero. Zip. Zilch. Nada. Nothing. Admission to HackSRM is completely free, thanks to our sponsors!
 								</li>
 							</ul>
 						</li>
@@ -455,7 +831,7 @@
 								<i class="fa fa-chevron-down"></i>
 							</div>
 							<ul class="submenu">
-								<li class="answer">Yes, you can have a minimum of 2 and maximum 5 members in a team.</li>
+								<li class="answer">Yes, you can have a minimum of 2 and maximum 4 members in a team.</li>
 							</ul>
 						</li>
 						<li>
@@ -486,7 +862,7 @@
 							</div>
 							<ul class="submenu">
 								<li class="answer">
-									HackSRM will be hosted on November 6th-8th, 2020, completely virtually. All you need is to create a Discord
+									HackSRM will be hosted on November 20th-22th, 2020, completely virtually. All you need is to create a Discord
 									account to communicate with our HackSRM community.
 								</li>
 							</ul>
@@ -496,11 +872,144 @@
 			</section>
 			<!-- END FAQs-->
 
-			<!-- ======= TEAM ======= -->
-			<section id="team" class="team">
-				<h2 class="section-title">The Crew 🏴‍☠️</h2>
+			<section id="sponsors" class="sponsors page-section dark-mode">
+				<h2 class="section-title">Sponsored By</h2>
 				<div class="container">
-					<h3 class="info">Meet the Crew ☠️ which made HackSRM possible through their sheer hardwork and a will to do something great.</h3>
+					<div class="tier-title-wrapper">
+						<p class="tier-title">Platinum</p>
+						<div class="line"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<a href="https://devfolio.co/" target="_blank">
+								<img src="assets/images/sponsors/devfolio.png" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="http://oureye.ai/" target="_blank">
+								<img src="assets/images/sponsors/oureye.png" alt="" />
+							</a>
+						</div>
+
+						<div class="col-md-4">
+							<a href="https://www.nimblebox.ai/" target="_blank">
+								<img src="assets/images/sponsors/nimblebox.png" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="https://www.echoar.xyz/" target="_blank">
+								<img src="assets/images/sponsors/echoAR.png" alt="" />
+							</a>
+						</div>
+					</div>
+
+					<!-- GOLD -->
+					<div class="tier-title-wrapper">
+						<p class="tier-title">Gold</p>
+						<div class="line"></div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<a href="https://matic.network/" target="_blank">
+								<img src="assets/images/sponsors/matic.png" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="https://fold.money/" target="_blank">
+								<img id="fold" src="assets/images/sponsors/fold.svg" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="https://www.portis.io/" target="_blank">
+								<img id="portis" src="assets/images/sponsors/portis.png" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="https://tezos.com/" target="_blank">
+								<img id="" src="assets/images/sponsors/tezos.png" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="https://www.jetbrains.com/" target="_blank">
+								<img id="jetbrains" src="assets/images/sponsors/jetbrains.png" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a id="framer" href="https://www.framer.com/" target="_blank">
+								<img src="assets/images/sponsors/framer.png" alt="" />
+								<p>Framer</p>
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="https://1password.com/" target="_blank">
+								<img id="" src="assets/images/sponsors/1P.png" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="https://cipherschools.com/" target="_blank">
+								<img src="assets/images/sponsors/cipher-schools.png" alt="" />
+							</a>
+						</div>
+					</div>
+
+					<!-- SILVER -->
+					<div class="tier-title-wrapper">
+						<p class="tier-title">Silver</p>
+						<div class="line"></div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<a href="https://repl.it/" target="_blank">
+								<img id="" src="assets/images/sponsors/replit.png" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="https://codingblocks.com/" target="_blank">
+								<img src="assets/images/sponsors/coding-blocks.png" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="https://www.linode.com/" target="_blank">
+								<img src="assets/images/sponsors/linode.png" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="https://www.wolfram.com/language/" target="_blank">
+								<img src="assets/images/sponsors/wolfram.png" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="https://givemycertificate.com/" target="_blank">
+								<img id="gmc" src="assets/images/sponsors/GMC_logo.png" alt="" />
+							</a>
+						</div>
+						<div class="col-md-4">
+							<a href="https://zubi.io/" target="_blank">
+								<img id="zubi" src="assets/images/sponsors/zubi.png" alt="" />
+							</a>
+						</div>
+					</div>
+					<div class="tier-title-wrapper">
+						<p class="tier-title">Tech partner</p>
+						<div class="line"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<a href="https://sawolabs.com/" target="_blank">
+								<img src="assets/images/sponsors/sawo.jpg" alt="" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ======= TEAM ======= -->
+			<section id="team" class="team page-section dark-mode">
+				<h2 class="section-title">Organizing Team</h2>
+				<div class="container-fluid">
+					<h3 class="info">Meet the team which made HackSRM possible through their sheer hardwork and a will to do something great.</h3>
 					<div class="card-container">
 						<div class="team-card">
 							<div class="img-wrapper">
@@ -508,12 +1017,12 @@
 							</div>
 							<div class="name">Harshad</div>
 							<div class="social-btn-container">
-								<a href="">
+								<a href="https://www.linkedin.com/in/harshad-dhane-4bb008195/" target="_blank">
 									<div class="linkedin">
 										<img src="assets/icons/linkedin.svg" alt="" />
 									</div>
 								</a>
-								<a href="">
+								<a href="https://github.com/Harshad141" target="_blank">
 									<div class="github">
 										<img src="assets/icons/github.svg" alt="" />
 									</div>
@@ -526,12 +1035,12 @@
 							</div>
 							<div class="name">Shanmukh</div>
 							<div class="social-btn-container">
-								<a href="">
+								<a href="https://www.linkedin.com/in/shanmukh-rachakunta-17295a1a3/" target="_blank">
 									<div class="linkedin">
 										<img src="assets/icons/linkedin.svg" alt="" />
 									</div>
 								</a>
-								<a href="">
+								<a href="https://github.com/SHANMUKH-R" target="_blank">
 									<div class="github">
 										<img src="assets/icons/github.svg" alt="" />
 									</div>
@@ -540,16 +1049,16 @@
 						</div>
 						<div class="team-card">
 							<div class="img-wrapper">
-								<img src="assets/images/team/pulkit4.jpg" alt="Crew Image" />
+								<img src="assets/images/team/pulkit.jpg" alt="Crew Image" />
 							</div>
 							<div class="name">Pulkit</div>
 							<div class="social-btn-container">
-								<a href="">
+								<a href="https://www.linkedin.com/in/pulkit-jasti/" target="_blank">
 									<div class="linkedin">
 										<img src="assets/icons/linkedin.svg" alt="" />
 									</div>
 								</a>
-								<a href="">
+								<a href="https://github.com/pulkit-jasti" target="_blank">
 									<div class="github">
 										<img src="assets/icons/github.svg" alt="" />
 									</div>
@@ -562,30 +1071,12 @@
 							</div>
 							<div class="name">Mohit</div>
 							<div class="social-btn-container">
-								<a href="">
+								<a href="https://www.linkedin.com/in/moitbytes/" target="_blank">
 									<div class="linkedin">
 										<img src="assets/icons/linkedin.svg" alt="" />
 									</div>
 								</a>
-								<a href="">
-									<div class="github">
-										<img src="assets/icons/github.svg" alt="" />
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="team-card">
-							<div class="img-wrapper">
-								<img src="assets/images/team/himansh.jpg" alt="Crew Image" />
-							</div>
-							<div class="name">Himansh</div>
-							<div class="social-btn-container">
-								<a href="">
-									<div class="linkedin">
-										<img src="assets/icons/linkedin.svg" alt="" />
-									</div>
-								</a>
-								<a href="">
+								<a href="https://github.com/moit-bytes" target="_blank">
 									<div class="github">
 										<img src="assets/icons/github.svg" alt="" />
 									</div>
@@ -598,12 +1089,12 @@
 							</div>
 							<div class="name">Kajal</div>
 							<div class="social-btn-container">
-								<a href="">
+								<a href="https://www.linkedin.com/in/kajal-tiwari-41a4071a3/" target="_blank">
 									<div class="linkedin">
 										<img src="assets/icons/linkedin.svg" alt="" />
 									</div>
 								</a>
-								<a href="">
+								<a href="https://github.com/KajalT9" target="_blank">
 									<div class="github">
 										<img src="assets/icons/github.svg" alt="" />
 									</div>
@@ -616,12 +1107,12 @@
 							</div>
 							<div class="name">Manikantha</div>
 							<div class="social-btn-container">
-								<a href="">
+								<a href="https://www.linkedin.com/in/krishna-veera-manikantha-gadde-36274718b" target="_blank">
 									<div class="linkedin">
 										<img src="assets/icons/linkedin.svg" alt="" />
 									</div>
 								</a>
-								<a href="">
+								<a href="https://github.com/rafamani" target="_blank">
 									<div class="github">
 										<img src="assets/icons/github.svg" alt="" />
 									</div>
@@ -634,12 +1125,12 @@
 							</div>
 							<div class="name">Palak</div>
 							<div class="social-btn-container">
-								<a href="">
+								<a href="https://www.linkedin.com/in/palak-agarwal-27584a1a0/" target="_blank">
 									<div class="linkedin">
 										<img src="assets/icons/linkedin.svg" alt="" />
 									</div>
 								</a>
-								<a href="">
+								<a href="https://github.com/palak-ag" target="_blank">
 									<div class="github">
 										<img src="assets/icons/github.svg" alt="" />
 									</div>
@@ -652,12 +1143,12 @@
 							</div>
 							<div class="name">Sai Teja</div>
 							<div class="social-btn-container">
-								<a href="">
+								<a href="https://www.linkedin.com/in/saiteja-tummuri-8ab810177" target="_blank">
 									<div class="linkedin">
 										<img src="assets/icons/linkedin.svg" alt="" />
 									</div>
 								</a>
-								<a href="">
+								<a href="https://github.com/imtsaiteja" target="_blank">
 									<div class="github">
 										<img src="assets/icons/github.svg" alt="" />
 									</div>
@@ -665,19 +1156,117 @@
 							</div>
 						</div>
 					</div>
+
+					<h3 class="sub-heading">Advisors</h3>
+
+					<div class="card-container">
+						<div class="team-card">
+							<div class="img-wrapper">
+								<img src="assets/images/team/rahul.jpg" alt="Crew Image" />
+							</div>
+							<div class="name">Rahul</div>
+							<div class="social-btn-container">
+								<a href="https://www.linkedin.com/in/rahul7668gupta/" target="_blank">
+									<div class="linkedin">
+										<img src="assets/icons/linkedin.svg" alt="" />
+									</div>
+								</a>
+								<a href="https://github.com/rahul7668gupta" target="_blank">
+									<div class="github">
+										<img src="assets/icons/github.svg" alt="" />
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="team-card">
+							<div class="img-wrapper">
+								<img src="assets/images/team/shahab2.jpg" alt="Crew Image" />
+							</div>
+							<div class="name">Shahab</div>
+							<div class="social-btn-container">
+								<a href="https://www.linkedin.com/in/snh3003/" target="_blank">
+									<div class="linkedin">
+										<img src="assets/icons/linkedin.svg" alt="" />
+									</div>
+								</a>
+								<a href="https://github.com/snh3003" target="_blank">
+									<div class="github">
+										<img src="assets/icons/github.svg" alt="" />
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="team-card">
+							<div class="img-wrapper">
+								<img src="assets/images/team/ambhuj.jpg" alt="Crew Image" />
+							</div>
+							<div class="name">Ambhuj</div>
+							<div class="social-btn-container">
+								<a href="#">
+									<div class="linkedin">
+										<img src="assets/icons/linkedin.svg" alt="" />
+									</div>
+								</a>
+								<a href="#">
+									<div class="github">
+										<img src="assets/icons/github.svg" alt="" />
+									</div>
+								</a>
+							</div>
+						</div>
+						<!--<div class="team-card">
+							<div class="img-wrapper">
+								<img src="assets/images/team/khushboo.jpg" alt="Crew Image" />
+							</div>
+							<div class="name">Khushboo</div>
+							<div class="social-btn-container">
+								<a href="https://www.linkedin.com/in/14khushboosharma/" target="_blank">
+									<div class="linkedin">
+										<img src="assets/icons/linkedin.svg" alt="" />
+									</div>
+								</a>
+								<a href="#">
+									<div class="github">
+										<img src="assets/icons/github.svg" alt="" />
+									</div>
+								</a>
+							</div>
+						</div>-->
+					</div>
 				</div>
 			</section>
 			<!-- END TEAM -->
 
 			<!-- ======= CONTACT ======= -->
-			<section id="contact" class="contact">
+			<section id="contact" class="contact page-section dark-mode">
 				<h2 class="section-title">Contact Us ☎️</h2>
 				<div class="container">
-					<p class="info">
+					<p class="sub">
 						The support team is here to help you. <br />
-						For any and all of your queries 🙋, mail 📧 us at
+						For any and all of your queries 🙋, mail 📧 us or drop a DM in discord.
 					</p>
-					<p class="email"><a href="">hacksrm@srmap.edu.in</a></p>
+					<div class="info-container">
+						<div class="info-wrapper">
+							<a class="mailtoui" href="mailto:hacksrm2018@gmail.com">
+								<div class="icon">
+									<img src="assets/images/contact/mail.png" alt="" />
+								</div>
+							</a>
+							<div class="title">Email</div>
+							<div class="info"><a class="mailtoui" href="mailto:hacksrm2018@gmail.com">hacksrm2018@gmail.com</a></div>
+						</div>
+						<div class="info-wrapper">
+							<a href="https://discord.gg/eSZDZ3k">
+								<div class="icon">
+									<img src="assets/images/contact/discord.png" alt="" />
+								</div>
+							</a>
+							<div class="title">Discord</div>
+							<div class="info">1. Pulkit Jasti#7768</div>
+							<div class="info">2. Harshad#3644</div>
+						</div>
+					</div>
+
 					<div id="contact-image" class="image-container">
 						<img src="assets/images/contact/contact-4.svg" alt="" />
 					</div>
@@ -685,9 +1274,223 @@
 				</div>
 			</section>
 			<!-- END CONTACT-->
+
+			<footer>
+				<div class="bubbles">
+					<div class="bubble" style="--size:2.11703812062643rem; --distance:7.733779508785792rem; --position:3.2987323508103437%; --time:2.9501064025125814s; --delay:-2.9483857787882277s;"></div>
+					<div class="bubble" style="--size:5.386357183258494rem; --distance:8.451553788751887rem; --position:2.1253136307103313%; --time:2.7879925026094554s; --delay:-2.806097702595748s;"></div>
+					<div class="bubble" style="--size:4.694426774240174rem; --distance:6.4564536045189955rem; --position:99.2838326613576%; --time:2.7193169328900213s; --delay:-2.0678280281669297s;"></div>
+					<div class="bubble" style="--size:5.149899532982792rem; --distance:7.515582940572792rem; --position:76.08906734237999%; --time:2.2988229295698606s; --delay:-2.9772262473649533s;"></div>
+					<div class="bubble" style="--size:2.5638390397899715rem; --distance:8.634939810504399rem; --position:60.880928502002575%; --time:3.5547771535083825s; --delay:-3.5085849533176137s;"></div>
+					<div class="bubble" style="--size:5.798759628309545rem; --distance:7.442038865126563rem; --position:24.46845718608906%; --time:3.2206367393501782s; --delay:-3.3280626222075496s;"></div>
+					<div class="bubble" style="--size:4.798803167589826rem; --distance:9.735645476763509rem; --position:100.66013190798819%; --time:2.852002666696573s; --delay:-3.753366748025246s;"></div>
+					<div class="bubble" style="--size:5.046737842586495rem; --distance:6.729172389614586rem; --position:85.02949965717231%; --time:3.8430602179039806s; --delay:-2.5679325430374376s;"></div>
+					<div class="bubble" style="--size:3.8493473434956313rem; --distance:7.736347614569298rem; --position:62.77919779511562%; --time:3.6415816459815273s; --delay:-3.512460079511894s;"></div>
+					<div class="bubble" style="--size:3.836582517542126rem; --distance:6.212432014067728rem; --position:-1.1146442363016362%; --time:3.7884878479992024s; --delay:-2.7466754471563455s;"></div>
+					<div class="bubble" style="--size:2.8282304585116225rem; --distance:8.595539114400973rem; --position:62.26765177230581%; --time:3.5081491817139936s; --delay:-2.2207139379198164s;"></div>
+					<div class="bubble" style="--size:4.826478592676889rem; --distance:9.833831160975176rem; --position:104.30198761633179%; --time:2.6825897808813925s; --delay:-3.7712742894768954s;"></div>
+					<div class="bubble" style="--size:3.902449197969688rem; --distance:8.800646983331633rem; --position:46.058455609762966%; --time:2.3865102819275723s; --delay:-2.424771245133807s;"></div>
+					<div class="bubble" style="--size:3.5922177952369947rem; --distance:7.7100257787758615rem; --position:24.744487471986897%; --time:3.656666008335459s; --delay:-2.694309246858957s;"></div>
+					<div class="bubble" style="--size:3.56944169949906rem; --distance:9.92720686991099rem; --position:79.98848599032212%; --time:2.095783121962902s; --delay:-2.8094009298980183s;"></div>
+					<div class="bubble" style="--size:5.010260012797502rem; --distance:9.17857896191081rem; --position:89.34139390492763%; --time:2.574243586935851s; --delay:-2.4970602152594044s;"></div>
+					<div class="bubble" style="--size:3.16823982691224rem; --distance:9.287680646289495rem; --position:-1.4813395917770364%; --time:2.6013433790243163s; --delay:-3.1387011585293805s;"></div>
+					<div class="bubble" style="--size:3.796232940580202rem; --distance:6.861384662639212rem; --position:21.91415469330123%; --time:2.8783227845070813s; --delay:-3.688669174462768s;"></div>
+					<div class="bubble" style="--size:4.451684238717414rem; --distance:8.556893030259083rem; --position:52.164780007678765%; --time:3.1574693713900284s; --delay:-3.305719068606936s;"></div>
+					<div class="bubble" style="--size:4.5857077865688645rem; --distance:9.325122506867961rem; --position:41.32694067705265%; --time:3.831208414407734s; --delay:-2.7209559524289606s;"></div>
+					<div class="bubble" style="--size:3.4435690169054514rem; --distance:8.284954211177372rem; --position:56.13943482340375%; --time:3.446114870943978s; --delay:-3.8498377535157307s;"></div>
+					<div class="bubble" style="--size:5.403698125451557rem; --distance:8.85844709522121rem; --position:47.24324979218787%; --time:3.3253063354629084s; --delay:-3.438283666379724s;"></div>
+					<div class="bubble" style="--size:5.538227206507068rem; --distance:6.859433507752186rem; --position:58.432551914385975%; --time:3.62720135342188s; --delay:-2.65374677273307s;"></div>
+					<div class="bubble" style="--size:5.940966851343573rem; --distance:7.446735075472251rem; --position:93.4802755683534%; --time:2.902334206796475s; --delay:-3.1681768480462678s;"></div>
+					<div class="bubble" style="--size:2.4417379787446167rem; --distance:8.926969896487952rem; --position:42.44569748967351%; --time:3.959776247117936s; --delay:-2.318116380944798s;"></div>
+					<div class="bubble" style="--size:4.083275081809646rem; --distance:8.700571231770512rem; --position:63.99890789907505%; --time:3.6144166247650826s; --delay:-3.8939823895439254s;"></div>
+					<div class="bubble" style="--size:2.1125115616038106rem; --distance:6.700813614915589rem; --position:104.00223142174819%; --time:2.2896709254473437s; --delay:-2.5075816114430656s;"></div>
+					<div class="bubble" style="--size:4.731462989446538rem; --distance:6.002875993024425rem; --position:23.19283073913825%; --time:2.6791387167417327s; --delay:-2.136818355607164s;"></div>
+					<div class="bubble" style="--size:3.9365616511950607rem; --distance:6.755769961537426rem; --position:98.00923368692185%; --time:2.5219442588524186s; --delay:-2.319515436392419s;"></div>
+					<div class="bubble" style="--size:2.2601390401161554rem; --distance:9.132938372171488rem; --position:0.4756277246607601%; --time:2.6036455606082862s; --delay:-2.155917057441611s;"></div>
+					<div class="bubble" style="--size:5.137964769535552rem; --distance:6.9035597005749585rem; --position:53.843191307002776%; --time:2.6894509771658957s; --delay:-3.6637753591684215s;"></div>
+					<div class="bubble" style="--size:2.8731470004457655rem; --distance:9.949829452530901rem; --position:81.35961137146855%; --time:3.16262479586182s; --delay:-2.980288926105945s;"></div>
+					<div class="bubble" style="--size:2.2886843659654517rem; --distance:7.3405851963596485rem; --position:23.720995236849504%; --time:2.9308266081582346s; --delay:-2.3185201378363534s;"></div>
+					<div class="bubble" style="--size:3.979834187364745rem; --distance:8.50507593871454rem; --position:39.399548265094815%; --time:3.660422466378619s; --delay:-2.2539775512123223s;"></div>
+					<div class="bubble" style="--size:4.861430375504353rem; --distance:8.19968272844821rem; --position:22.548037231658547%; --time:3.342285171337843s; --delay:-3.496102205735827s;"></div>
+					<div class="bubble" style="--size:4.057058859262163rem; --distance:7.211866724435273rem; --position:65.88063221752493%; --time:2.273920800657738s; --delay:-3.2013093662993874s;"></div>
+					<div class="bubble" style="--size:3.8161483313030113rem; --distance:7.126967841861871rem; --position:73.45436450969456%; --time:2.6599874782774258s; --delay:-2.3265803443805337s;"></div>
+					<div class="bubble" style="--size:3.8124222192686466rem; --distance:6.161416620372014rem; --position:40.843606404332036%; --time:2.137449030716698s; --delay:-3.796846730453991s;"></div>
+					<div class="bubble" style="--size:5.137904893197273rem; --distance:7.380771962829028rem; --position:21.00647197971892%; --time:3.4257049323159343s; --delay:-3.851215188581118s;"></div>
+					<div class="bubble" style="--size:2.9782629842045596rem; --distance:6.215698932751222rem; --position:51.92474314227956%; --time:3.9394520157773356s; --delay:-2.8099616313878824s;"></div>
+					<div class="bubble" style="--size:5.120904512108042rem; --distance:8.708854319773433rem; --position:-3.607405688299643%; --time:2.1730844668715683s; --delay:-2.9377290686228514s;"></div>
+					<div class="bubble" style="--size:4.063441568664414rem; --distance:7.324994667868258rem; --position:14.28480497159238%; --time:2.2620593684060113s; --delay:-3.1156782859957666s;"></div>
+					<div class="bubble" style="--size:2.11743640007171rem; --distance:7.542186194318997rem; --position:32.78607473107475%; --time:3.206994017419202s; --delay:-3.1765707721448924s;"></div>
+					<div class="bubble" style="--size:2.556000149353838rem; --distance:6.189837007124878rem; --position:20.92321704874394%; --time:2.2658499018811002s; --delay:-2.36605972059778s;"></div>
+					<div class="bubble" style="--size:3.496646745633205rem; --distance:9.742041959599064rem; --position:33.00585856238156%; --time:2.3818453551190273s; --delay:-2.8410985323937066s;"></div>
+					<div class="bubble" style="--size:4.937754981849491rem; --distance:7.496761497598104rem; --position:39.820976486305106%; --time:2.723791994131891s; --delay:-2.140268938629072s;"></div>
+					<div class="bubble" style="--size:5.699279276494763rem; --distance:8.184152641633704rem; --position:83.4077614296118%; --time:2.417123063465507s; --delay:-3.4369143547698435s;"></div>
+					<div class="bubble" style="--size:2.377453608574528rem; --distance:9.999815434026484rem; --position:29.48644568666026%; --time:2.490422829104063s; --delay:-2.144231521289023s;"></div>
+					<div class="bubble" style="--size:3.053663662583681rem; --distance:9.618423285824086rem; --position:90.24863202582462%; --time:2.178242624663691s; --delay:-3.7890354577515364s;"></div>
+					<div class="bubble" style="--size:2.2352358793971185rem; --distance:7.880722546815708rem; --position:3.0082053996058953%; --time:3.1089011832910467s; --delay:-3.602611272759882s;"></div>
+					<div class="bubble" style="--size:3.906992607146172rem; --distance:9.017227951204594rem; --position:42.11381850633692%; --time:2.6253459634762057s; --delay:-3.5414940603181195s;"></div>
+					<div class="bubble" style="--size:4.030443972534061rem; --distance:6.751990380925679rem; --position:80.88612389356467%; --time:3.9153267439834183s; --delay:-2.514378294136625s;"></div>
+					<div class="bubble" style="--size:4.693919667671592rem; --distance:7.39370138846054rem; --position:33.163428595671725%; --time:2.574142643796339s; --delay:-3.0738557821543733s;"></div>
+					<div class="bubble" style="--size:4.1125798951565775rem; --distance:7.354396537673793rem; --position:5.257759707100618%; --time:2.567749481235259s; --delay:-3.37399812373691s;"></div>
+					<div class="bubble" style="--size:2.9021163558889693rem; --distance:6.961642154899936rem; --position:92.34105971898646%; --time:3.693749950032239s; --delay:-2.8361707685569644s;"></div>
+					<div class="bubble" style="--size:3.2443266012619034rem; --distance:6.196509689581015rem; --position:78.97835962718096%; --time:3.0661279939767097s; --delay:-3.9206888965196534s;"></div>
+					<div class="bubble" style="--size:5.333737821267034rem; --distance:8.98591515904462rem; --position:102.35332826634443%; --time:2.583894921171604s; --delay:-3.3561805660701634s;"></div>
+					<div class="bubble" style="--size:2.6793779995760927rem; --distance:6.277086400815934rem; --position:5.172300131970509%; --time:3.6906310874902015s; --delay:-2.183319389558376s;"></div>
+					<div class="bubble" style="--size:4.816074649357229rem; --distance:9.479186924871977rem; --position:27.944535633530705%; --time:3.486433592094039s; --delay:-3.519231089510699s;"></div>
+					<div class="bubble" style="--size:2.492387240131493rem; --distance:7.293711279124167rem; --position:5.305696298582532%; --time:2.154587129381028s; --delay:-3.6486749037360102s;"></div>
+					<div class="bubble" style="--size:5.835219140144529rem; --distance:7.5436858015805335rem; --position:96.78284348114221%; --time:3.803857760021353s; --delay:-3.8522621602615947s;"></div>
+					<div class="bubble" style="--size:4.88993085829314rem; --distance:7.593451490988251rem; --position:45.82660520248899%; --time:2.1117404402941027s; --delay:-3.9118624239940294s;"></div>
+					<div class="bubble" style="--size:4.083153445319995rem; --distance:9.139923457706514rem; --position:69.90313150098815%; --time:3.2483562011189147s; --delay:-3.3612091065787313s;"></div>
+					<div class="bubble" style="--size:4.092467185163867rem; --distance:6.132714855830319rem; --position:77.99993054365414%; --time:3.9566756842425814s; --delay:-2.9456995136154074s;"></div>
+					<div class="bubble" style="--size:5.133680479583608rem; --distance:6.2407575280165695rem; --position:49.31239893987662%; --time:2.53402316462216s; --delay:-2.559905742246202s;"></div>
+					<div class="bubble" style="--size:4.031565230720544rem; --distance:7.2341153814715895rem; --position:87.91417838008627%; --time:3.95270285593671s; --delay:-2.0474480992487187s;"></div>
+					<div class="bubble" style="--size:3.83025874556024rem; --distance:8.735592919661498rem; --position:99.60897602395555%; --time:3.7484926929149793s; --delay:-3.1219856663627654s;"></div>
+					<div class="bubble" style="--size:4.417440643516681rem; --distance:6.101999636185946rem; --position:93.17290358394776%; --time:3.197357065005386s; --delay:-3.84242346156692s;"></div>
+					<div class="bubble" style="--size:5.175545625910907rem; --distance:9.808747934280282rem; --position:24.628220410302422%; --time:2.938041596216054s; --delay:-3.889988131800983s;"></div>
+					<div class="bubble" style="--size:4.39754213767859rem; --distance:7.767801820783516rem; --position:57.54377418319099%; --time:3.512828901504093s; --delay:-3.849520137329412s;"></div>
+					<div class="bubble" style="--size:5.960750944470977rem; --distance:7.386516702383431rem; --position:4.227074011009872%; --time:3.052007509536921s; --delay:-2.3134604744861473s;"></div>
+					<div class="bubble" style="--size:5.262043313657303rem; --distance:7.028327284985188rem; --position:80.75915546716232%; --time:3.8354811979893384s; --delay:-3.3609056042938947s;"></div>
+					<div class="bubble" style="--size:5.5410711152358045rem; --distance:8.048079547032945rem; --position:20.37477120439375%; --time:3.160464043538827s; --delay:-2.4558613319365765s;"></div>
+					<div class="bubble" style="--size:4.706625711189792rem; --distance:7.785527668890147rem; --position:18.410482210148977%; --time:3.679367565471526s; --delay:-3.466298706310954s;"></div>
+					<div class="bubble" style="--size:4.940172178779443rem; --distance:7.6517765628047565rem; --position:66.25242519269631%; --time:3.5434187952853033s; --delay:-2.043473241172407s;"></div>
+					<div class="bubble" style="--size:4.581190357572863rem; --distance:8.533709755184258rem; --position:45.92822466777127%; --time:2.642469808438886s; --delay:-3.9922377030562153s;"></div>
+					<div class="bubble" style="--size:5.970202693735763rem; --distance:7.666201835838768rem; --position:92.08620864787203%; --time:3.962165058235244s; --delay:-3.4542819849232558s;"></div>
+					<div class="bubble" style="--size:3.9817045458100466rem; --distance:6.053673536883609rem; --position:89.20494078719058%; --time:3.0752714956463754s; --delay:-2.0941018650754755s;"></div>
+					<div class="bubble" style="--size:5.902255815693721rem; --distance:6.327771300248922rem; --position:84.26985839829293%; --time:3.9344244359860068s; --delay:-2.0942955083384254s;"></div>
+					<div class="bubble" style="--size:2.135460866349517rem; --distance:6.319464511290596rem; --position:3.3856871650616434%; --time:2.8784206494642115s; --delay:-2.948467331400643s;"></div>
+					<div class="bubble" style="--size:5.167373760957759rem; --distance:6.794822264261613rem; --position:62.78155397466857%; --time:2.142134283405258s; --delay:-2.3583145796270504s;"></div>
+					<div class="bubble" style="--size:3.833593382612441rem; --distance:6.262349620864472rem; --position:56.22265177713096%; --time:2.892734039297795s; --delay:-2.0469378184177014s;"></div>
+					<div class="bubble" style="--size:3.997770805030091rem; --distance:9.994380922940366rem; --position:47.2133636190561%; --time:3.0694144083412698s; --delay:-3.9292314688320653s;"></div>
+					<div class="bubble" style="--size:3.263571138452413rem; --distance:8.357964226766205rem; --position:52.65389387095425%; --time:3.0520757623258667s; --delay:-3.607807205940553s;"></div>
+					<div class="bubble" style="--size:4.786314634142046rem; --distance:6.605546751144368rem; --position:93.44349785583078%; --time:3.8698136353067367s; --delay:-2.740415464797438s;"></div>
+					<div class="bubble" style="--size:3.48932611596137rem; --distance:6.771258086406924rem; --position:1.74129591164521%; --time:3.0912963389300003s; --delay:-3.531526067804273s;"></div>
+					<div class="bubble" style="--size:2.3015396955236858rem; --distance:7.117672217712189rem; --position:6.377854074960981%; --time:2.2167670264533523s; --delay:-2.1003696195189696s;"></div>
+					<div class="bubble" style="--size:3.021617650681403rem; --distance:9.870012934336266rem; --position:16.71986031399054%; --time:2.666028167914053s; --delay:-2.5261369975154793s;"></div>
+					<div class="bubble" style="--size:3.1261830525532495rem; --distance:7.731000841539011rem; --position:20.405114064828336%; --time:2.8428032404875947s; --delay:-3.075385784870996s;"></div>
+					<div class="bubble" style="--size:2.4732010554031603rem; --distance:7.911618848290175rem; --position:93.31796505817593%; --time:2.2819896137007754s; --delay:-2.6998182126427563s;"></div>
+					<div class="bubble" style="--size:5.474329216996294rem; --distance:6.885343887668247rem; --position:44.25220884939797%; --time:3.2539895352831447s; --delay:-2.2774967839791023s;"></div>
+					<div class="bubble" style="--size:5.359730139916828rem; --distance:8.327675685998326rem; --position:44.84979089058296%; --time:2.0449987408143615s; --delay:-3.5190700840861986s;"></div>
+					<div class="bubble" style="--size:2.563618015199011rem; --distance:6.413011940146358rem; --position:56.31483404236636%; --time:3.0152538658106476s; --delay:-2.479687797564326s;"></div>
+					<div class="bubble" style="--size:3.535193858989318rem; --distance:8.380037068222968rem; --position:58.690360569675505%; --time:2.966360968634036s; --delay:-2.8550772050394135s;"></div>
+					<div class="bubble" style="--size:4.419856243289047rem; --distance:7.684627453212277rem; --position:27.587541990062988%; --time:2.183767921624261s; --delay:-2.8268356116612243s;"></div>
+					<div class="bubble" style="--size:5.420886974324331rem; --distance:7.316710061978562rem; --position:44.301752641676444%; --time:2.0300604877107773s; --delay:-2.607010722419108s;"></div>
+					<div class="bubble" style="--size:5.428003010120097rem; --distance:6.236169108445216rem; --position:59.60787714578228%; --time:2.1137529204527823s; --delay:-3.9992637649467353s;"></div>
+					<div class="bubble" style="--size:4.463556766316321rem; --distance:8.477687584957025rem; --position:104.99570895752717%; --time:3.776804320725949s; --delay:-3.171459725338636s;"></div>
+					<div class="bubble" style="--size:3.1867554134054066rem; --distance:9.454399558847975rem; --position:1.7213379655597025%; --time:2.2281180143645556s; --delay:-3.1789456823836932s;"></div>
+					<div class="bubble" style="--size:4.703447533761116rem; --distance:7.710784065338267rem; --position:12.123126620336457%; --time:3.978953101420362s; --delay:-3.909618614981439s;"></div>
+					<div class="bubble" style="--size:3.2275450869834335rem; --distance:6.320087748714368rem; --position:12.177881319326236%; --time:3.7263670651486622s; --delay:-2.5215282934173153s;"></div>
+					<div class="bubble" style="--size:4.4115049792973124rem; --distance:6.084502307123612rem; --position:-0.8299164346894949%; --time:3.6645834138750724s; --delay:-3.358813035234777s;"></div>
+					<div class="bubble" style="--size:5.854685521819686rem; --distance:6.899811548161164rem; --position:78.51715439792477%; --time:2.8877838338368536s; --delay:-3.852870338578141s;"></div>
+					<div class="bubble" style="--size:4.862914981572041rem; --distance:7.53383413519137rem; --position:-0.4763054993508611%; --time:2.4777536982936303s; --delay:-2.835851508898279s;"></div>
+					<div class="bubble" style="--size:5.686246606076363rem; --distance:7.0455525570944975rem; --position:53.30765066288062%; --time:3.284653217250693s; --delay:-3.824602698455564s;"></div>
+					<div class="bubble" style="--size:5.609407190586812rem; --distance:7.538354845196412rem; --position:104.1226543127849%; --time:3.3518407830750103s; --delay:-2.486861755443558s;"></div>
+					<div class="bubble" style="--size:5.6032710407673445rem; --distance:8.766032589031663rem; --position:88.51109181999115%; --time:2.8798118765248244s; --delay:-3.342009815317182s;"></div>
+					<div class="bubble" style="--size:4.62662358738174rem; --distance:6.379263576667565rem; --position:46.20935928121069%; --time:2.0251986745247015s; --delay:-2.129983555952103s;"></div>
+					<div class="bubble" style="--size:5.634252367279233rem; --distance:6.702126721604971rem; --position:64.97283870682612%; --time:3.5812125549036433s; --delay:-3.8559723775465935s;"></div>
+					<div class="bubble" style="--size:3.094848314836026rem; --distance:6.048535527937679rem; --position:44.70749485106385%; --time:3.6257818618423583s; --delay:-3.622887218813357s;"></div>
+					<div class="bubble" style="--size:4.491599543763858rem; --distance:6.788779321707462rem; --position:55.64248636372023%; --time:3.091074817163639s; --delay:-2.8395859458955384s;"></div>
+					<div class="bubble" style="--size:3.168124095674292rem; --distance:8.201164568307828rem; --position:54.98141750781814%; --time:2.3684553672656756s; --delay:-3.737731336706598s;"></div>
+					<div class="bubble" style="--size:5.466862484716162rem; --distance:8.04277844809624rem; --position:104.236209551494%; --time:3.060912591094485s; --delay:-3.6645473241779225s;"></div>
+					<div class="bubble" style="--size:2.400205195663119rem; --distance:9.10108985538819rem; --position:54.039795092215996%; --time:2.027893441729888s; --delay:-2.825717462348109s;"></div>
+					<div class="bubble" style="--size:2.1677078694689578rem; --distance:8.74919958467169rem; --position:50.963884043424784%; --time:2.828462520078933s; --delay:-3.574977551500175s;"></div>
+					<div class="bubble" style="--size:3.1070816261419942rem; --distance:7.578413569459145rem; --position:44.64534284530085%; --time:3.9759327250452543s; --delay:-2.0968645855457417s;"></div>
+					<div class="bubble" style="--size:3.6397684464124276rem; --distance:9.385675271780904rem; --position:57.8153649236373%; --time:2.8108926370769916s; --delay:-3.203452274264049s;"></div>
+					<div class="bubble" style="--size:5.616510152950421rem; --distance:6.492637559972982rem; --position:74.22150891451537%; --time:2.632187979082288s; --delay:-3.1444083285999613s;"></div>
+					<div class="bubble" style="--size:5.255715575927018rem; --distance:8.80393785413058rem; --position:29.49623665324866%; --time:2.960748573809881s; --delay:-3.3733680234854484s;"></div>
+					<div class="bubble" style="--size:4.96426027893887rem; --distance:6.207268896684054rem; --position:70.87881675340002%; --time:2.5098867628302783s; --delay:-3.94955062194087s;"></div>
+					<div class="bubble" style="--size:5.261360855098394rem; --distance:9.49465768152131rem; --position:63.42529754713665%; --time:2.3248619172467535s; --delay:-3.4692913811440245s;"></div>
+					<div class="bubble" style="--size:3.346213900561588rem; --distance:7.314528471324417rem; --position:-0.37844214282696953%; --time:3.337459365914986s; --delay:-2.301089295328219s;"></div>
+					<div class="bubble" style="--size:5.501106362789268rem; --distance:8.80681434757385rem; --position:48.791036478223%; --time:2.955243120148411s; --delay:-3.2184409616814134s;"></div>
+					<div class="bubble" style="--size:2.2292646449246845rem; --distance:8.932671594483864rem; --position:35.286227076071164%; --time:3.5646209376351923s; --delay:-3.616110399502728s;"></div>
+					<div class="bubble" style="--size:4.506028281890282rem; --distance:7.043312029739092rem; --position:89.05390315745309%; --time:2.881777609692825s; --delay:-2.1719369743302703s;"></div>
+					<div class="bubble" style="--size:5.989608933739358rem; --distance:9.91202002277455rem; --position:66.40035003985642%; --time:2.574202596218208s; --delay:-2.547933409802928s;"></div>
+					<div class="bubble" style="--size:2.908446188675874rem; --distance:6.7289961040763595rem; --position:74.4837434249152%; --time:2.7882268228000204s; --delay:-3.227511681109486s;"></div>
+					<div class="bubble" style="--size:4.065049739952047rem; --distance:6.232032393642827rem; --position:21.47422930149808%; --time:2.7702469419708695s; --delay:-3.472495168224133s;"></div>
+				</div>
+				<div class="content">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-2 logo-wrapper">
+								<img src="assets/images/logo.png" alt="" />
+							</div>
+							<div class="col-md-2">
+								<h4>Navigate</h4>
+								<ul class="menu">
+									<li class="menu-item"><a href="#hero">Home</a></li>
+									<li class="menu-item"><a href="#about">About</a></li>
+									<!--<li class="menu-item"><a href="#prizes">Prizes</a></li>-->
+									<li class="menu-item"><a href="#themes">Themes</a></li>
+									<li class="menu-item"><a href="#schedule">Schedule</a></li>
+									<li class="menu-item"><a href="#faq">FAQs</a></li>
+									<li class="menu-item"><a href="#sponsors">Sponsors</a></li>
+									<li class="menu-item"><a href="#team">Team</a></li>
+									<li class="menu-item"><a href="#contact">Contact Us</a></li>
+								</ul>
+							</div>
+							<div class="col-md-2">
+								<h4>Resources</h4>
+								<a href="assets/coc/code-of-conduct.pdf" target="_blank">
+									<p>Code Of Conduct</p>
+								</a>
+
+								<h4>Archives</h4>
+								<a href="http://hacksrm.tech/HackSRM-2.0/" target="_blank">
+									<p>HackSRM 2.0</p>
+								</a>
+							</div>
+							<div class="col-md-3">
+								<h4>Social</h4>
+								<h6>Follow us for latest updates:</h6>
+								<div class="social-wrapper">
+									<a href="https://www.facebook.com/HackSRM" target="_blank">
+										<div class="social-icon">
+											<i class="fa fa-facebook" aria-hidden="true"></i>
+										</div>
+									</a>
+									<a href="https://instagram.com/hacksrm?igshid=1r1v6qmonwr8o" target="_blank">
+										<div class="social-icon">
+											<i class="fa fa-instagram" aria-hidden="true"></i>
+										</div>
+									</a>
+									<!--<a href="">
+										<div class="social-icon">
+											<i class="fa fa-linkedin" aria-hidden="true"></i>
+										</div>
+									</a>-->
+									<a href="https://twitter.com/HackSRM" target="_blank">
+										<div class="social-icon">
+											<i class="fa fa-twitter" aria-hidden="true"></i>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="copyright-info">
+							<p id="copyright"></p>
+							<p>
+								HackSRM 3.0 website designed and developed by
+								<a href="https://github.com/pulkit-jasti" target="_blank">Pulkit Jasti</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<svg style="position: fixed; top: 100vh">
+					<defs>
+						<filter id="blob">
+							<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+							<feColorMatrix
+								in="blur"
+								mode="matrix"
+								values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+								result="blob"
+							></feColorMatrix>
+							<feComposite in="SourceGraphic" in2="blob" operator="atop"></feComposite>
+						</filter>
+					</defs>
+				</svg>
+			</footer>
 		</main>
 
-		<!-- Optional JavaScript -->
+		<!-- JAVASCRIPT -->
 
 		<script
 			src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -722,10 +1525,20 @@
 		<!--vendor javascript-->
 		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 
+		<script src="assets/plugins/MailtoUI/mailtoui.min.js"></script>
+
+		<script src="dist/js/confetti.min.js"></script>
+
 		<!--main javascript-->
-		<script src="js/script.js"></script>
-		<script src="js/header.js"></script>
-		<script src="js/accordion.js"></script>
-		<script src="js/canvas-particle.js"></script>
+		<script src="dist/js/devfolio.js"></script>
+		<script src="dist/js/main.js"></script>
+		<script src="dist/js/header.js"></script>
+		<script src="dist/js/accordion.js"></script>
+		<script src="dist/js/canvas-particle.js"></script>
+		<script src="dist/js/timer.js"></script>
+		<script src="dist/js/smooth-scrolling.js"></script>
+		<script src="dist/js/typed.js"></script>
+		<script src="dist/js/copyright.js"></script>
+		<script src="dist/js/darkmode.js"></script>
 	</body>
 </html>
